@@ -1,0 +1,52 @@
+section#workana
+	background: #efefef
+	.descricao-workana
+		margin: 0 auto 30px
+		text-align: center;
+		max-width: 600px;
+		color: $arsenic
+	.comentarios
+		+clearfix
+		+make-row
+		margin-bottom: 30px
+		> li
+			+make-sm-column(4)
+			text-align: center
+			> ul 
+				li
+					margin: 10px 0
+					color: $arsenic
+					&:nth-child(3)
+						font-style: italic
+					img
+						+border-radius(120px)
+						margin-bottom: 10px
+					p
+						background: $branco
+						border-radius: 4px
+						padding: 10px
+						margin-top: 20px
+					 	box-shadow: 2px 2px 1px rgba(0,0,0,.2)
+					 	position: relative
+						&:after
+							content: ""
+							width: 0
+							height: 0
+							position: absolute
+							top: 150px
+							+breakpoint($laptop)
+								top: 150px
+							+breakpoint($tablet)
+								top: 149px
+							+breakpoint($celular)
+								top: 140px
+							left: calc(50% - 10px)
+							border-left: 10px solid transparent
+							border-right: 10px solid transparent
+							border-bottom: 15px solid $branco
+					span
+						font-weight: $regular
+						i
+							margin: 0 2px
+							color: #ffc73b
+							text-shadow: 1px 1px 1px rgba(0,0,0,.4)

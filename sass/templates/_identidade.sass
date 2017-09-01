@@ -1,0 +1,136 @@
+@import atoms/linksbower
+
+section#identidade
+	background: #f2efea
+	
+	.video-identidade
+		+flexbox
+		+justify-content(center)
+		margin-bottom: 30px
+		img
+			max-width: 570px
+			max-hegiht: 317px
+			width: 100%
+			height: 100%
+
+	.descricao-identidade
+		margin: 0 auto 30px
+		text-align: center;
+		max-width: 600px;
+
+	.tabela-identidade-preco
+		> ul
+			+clearfix
+			+make-row
+			> li
+				+make-xs-column(12)
+				+make-sm-column(6)
+				+make-md-column(3)
+				text-align: center;
+				> ul				
+					background: 
+						position: top center
+						repeat: no-repeat
+						size: 100% 94px
+						color: #ede5e3
+					padding: 20px 15px 10px
+					margin: 0 0 30px 0
+					&.plano-basico
+						background:
+							image: url('../images/identidade/bg-basico.png')
+					&.plano-profissional
+						background:
+							image: url('../images/identidade/bg-profissional.png')
+					&.plano-business
+						background:
+							image: url('../images/identidade/bg-business.png')
+					&.plano-personalizado
+						background:
+							image: url('../images/identidade/bg-personalizado.png')					
+					li:first-child
+						position: relative
+						top: -10px
+						margin-bottom: 20px	
+						strong
+							color: $branco
+					li
+						margin-bottom: 10px
+						padding: 0 5px
+						font-weight: $regular
+						color: #666666
+						strong
+							+font-size(30pt)
+							font-weight: $bold
+							color: #333333
+	table
+		+clearfix
+		// +make-row
+		+make-sm-column(10)
+		+make-sm-column-offset(1)
+		+make-xs-column(12)
+		// +make-xs-column-offset(1)
+		background: #f4f1ed
+		text-align: center
+		+font-size(17pt)
+		+breakpoint($tablet)
+			+font-size(14pt)
+		+breakpoint($celular)
+			+font-size(13pt)
+		margin-bottom: 60px
+		thead
+			background: #c7c4c0
+			color: #666666
+			tr
+				+make-row
+				th
+					+make-sm-column(3)
+					padding: 5px 0
+				th:nth-child(2),
+				th:nth-child(3),
+				th:nth-child(4)
+					+breakpoint($celular)
+						color: transparent
+						max-width: 20px !important
+				th:nth-child(2)
+					+breakpoint($celular)
+						background: rgba(102,215,209,.2)
+				th:nth-child(3)
+					+breakpoint($celular)
+						background: rgba(204,204,102,.2)
+				th:nth-child(4)
+					+breakpoint($celular)
+						background: rgba(255,153,51,.2)
+				th:first-child
+					text-align: right
+					padding: 5px 10px
+		tbody
+			tr
+				+make-row
+				td
+					+make-sm-column(3)
+					padding: 5px 0
+				td > i.verde
+					color: #3cb878
+				td > i.vermelho
+					color: $vermelho
+					background: transparent
+			tr > td:first-child
+				background: rgba(199,196,192,.2)
+				padding: 5px 10px
+				text-align: right
+			tr > td:nth-child(2)
+				background: rgba(102,215,209,.2)
+				padding: 5px 10px
+			tr > td:nth-child(3)
+				background: rgba(204,204,102,.2)
+				padding: 5px 10px
+			tr > td:nth-child(4)
+				background: rgba(255,153,51,.2)
+				padding: 5px 10px
+			tr.dif
+				background: #d7d4d0
+		tfoot
+			text-align: center
+			display: none
+			+breakpoint($celular)
+				display: table-footer-group

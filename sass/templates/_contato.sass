@@ -1,0 +1,50 @@
+section#contato
+	background:
+		image: url('../images/bg-contato.png')
+		position: bottom center
+		repeat: no-repeat
+		color: $preto
+		attachment: fixed
+		size: cover
+	form
+		padding-bottom: 30px
+		+clearfix
+		+make-sm-column(8)
+		+make-sm-column-offset(2)
+		.cols
+			+make-row
+		.col
+			+make-sm-column(6)
+		input,
+		select,
+		textarea
+			width: 100%
+			padding: 9px
+			background: rgba(255,255,255,.4)
+			color: $branco
+			border-color: transparent
+		.icon-select
+			background: 
+				image: url(../images/contato/icon-select.png)
+				repeat: no-repeat
+				position: center right 9px
+				color: rgba(255,255,255,.4)
+				size: 20px 20px
+			select
+				background: transparent
+				-webkit-appearance: none
+				-moz-appearance:    none
+				appearance:         none
+				option
+					background: #999999
+		input[value="Pedir Desconto"]
+			text-align: center
+			font-weight: $regular
+		::-webkit-input-placeholder
+		   color: $branco
+		:-moz-placeholder
+		   color: $branco
+		::-moz-placeholder
+		   color: $branco
+		:-ms-input-placeholder  
+		   color: $branco

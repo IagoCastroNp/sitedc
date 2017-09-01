@@ -1,0 +1,82 @@
+footer
+	background: $arsenic
+	color: $branco
+	
+	hr
+		margin: 0
+		padding: 0
+
+	.link-footer
+		margin: 0
+		text-align: center
+		li
+			display: inline-block
+			padding: 15px
+			a
+				color: $branco
+			a:hover
+				color: $vermelho
+	.social-footer
+		+flexbox
+		+align-items(center)
+		+justify-content(space-around)
+		+breakpoint($celular)
+			+flex-direction(column)
+		padding: 30px 0
+		margin: 0
+		ul,
+		p
+			text-align: center
+			padding: 0
+			margin: 0
+		ul
+			+breakpoint($celular)
+				+flexbox
+				margin-bottom:  20px
+			+breakpoint($tablet)
+				+flexbox
+				margin-bottom:  20px
+			li
+				+make-sm-column(6)
+				a
+					+flexbox
+					+flex-direction(column)
+					+align-items(center)
+					i
+						padding: 10px
+						+font-size(50pt)
+						text-align: center
+			li
+				a
+					color: $branco
+				a:hover
+					color: $vermelho
+		p
+			+make-sm-column(4)
+	.contato-footer
+		+breakpoint($celular)
+			+flex-direction(column)
+			+align-items(center)
+			li ul > li
+				text-align: center
+		+breakpoint($tablet)
+			> li
+				padding: 10px
+				strong
+					+font-size(16pt)
+		+flexbox
+		+justify-content(space-around)
+		padding: 20px
+		.cadastraremail
+			input
+				border: none
+				padding: 5px
+				margin: 0
+				color: $arsenic
+			button
+				background: $vermelho
+				border: none
+				padding: 5px 10px
+				margin: 0
+	.copyr
+		text-align: center
