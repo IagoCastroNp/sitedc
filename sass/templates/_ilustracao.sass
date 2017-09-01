@@ -76,6 +76,7 @@ section#ilustracao
 			li
 				[class^="preco-"]
 					+flexbox
+					+flex-wrap(wrap)
 					+align-items(center)
 					+justify-content(space-between)
 					background: #f1f1f1
@@ -85,6 +86,13 @@ section#ilustracao
 					li:last-child
 						text-align: right
 						padding: 0 0 0 20px
+					+breakpoint($celular)
+						+justify-content(center)
+						text-align: center
+						li:last-child
+							text-align: center
+							padding: 5px
+
 
 	.editar-posicoes
 		+clearfix
