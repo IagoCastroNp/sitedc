@@ -3,18 +3,27 @@ body
 
 .menu-responsivo
 	position: fixed
-	width: 150px
-	height: 100%
-	left: -150px
-	top: 0
-	+gradient(0deg, $verde, $azul)
+	display: table
+	width: 100%
+	left: 0
+	top: -100%
+	background: $arsenic
+	z-index: 2
+	+transition(.3s)
 
 	&.ativo
-		left: 0
+		top: 0
 
 	ul
+		margin: 0
+		padding: 0
 		li
-			border-bottom: 1px solid $branco
+			border-top: thin solid $branco
+			border-right: thin solid $branco
+
+			&:last-child
+				border-bottom: thin solid $branco
+
 			a
 				padding: 7px
 				display: block
@@ -24,62 +33,36 @@ body
 				&:focus
 					background-color: rgba($preto, .4)
 
-.layout
-	&.ativo
-		+transition(.2s)
-		padding-left: 150px
-
 .toggle
-	width: 30px
-	height: 30px
-	float: right
-	position: relative
-	overflow: hidden
-	margin: 0 12px
-	display: none
-
+	position: fixed
+	top: 0
+	right: 0
+	display: none !important
+	color: $branco
+	z-index: 2
+	margin: 4px 12px
+	+font-size(30pt)
+	line-height: 12px
+	text-align: center
 	+breakpoint($celular)
-		display: block
-
+		display: block !important
 	+breakpoint($tablet)
-		display: block
+		display: block !important
 
+	&:after
+		content: ""
+		width: 0
+		height: 0
+		position: fixed
+		top: 0
+		z-index: -1
+		right: 0
+		border-left: 80px solid transparent
+		border-right: 0px solid transparent
+		border-top: 75px solid #ff3748
 
 	&:hover
-		span
-			&:nth-child(1)
-				top: 6px
-				
-			&:nth-child(3)
-				top: 20px
+		color: $arsenic
+		&:after
+			border-top-color: $branco
 
-	&.ativo
-		span
-			&:nth-child(1)
-				top: 15px
-				+rotate(48deg)
-			&:nth-child(3)
-				+rotate(128deg)
-				top: 14px
-
-			&:nth-child(2)
-				display: none
-
-	span
-		width: 100%
-		height: 1px
-		content: " "
-		display: block
-		background-color: $branco
-		position: absolute
-		left: 0
-		+transition(.2s)
-
-		&:nth-child(1)
-			top: 4px
-			
-		&:nth-child(2)
-			top: 13px
-
-		&:nth-child(3)
-			top: 22px

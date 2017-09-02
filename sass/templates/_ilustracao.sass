@@ -78,19 +78,22 @@ section#ilustracao
 					+flexbox
 					+flex-wrap(wrap)
 					+align-items(center)
-					+justify-content(space-between)
+					+justify-content(center)
 					background: #f1f1f1
 					margin: 20px 0
 					padding: 5px
 					color: $arsenic
+					text-align: center
+					li
+						margin-top: 10px
+					li:first-child
+						border-bottom: thin solid #e1e1e1
+						padding-bottom: 5px
 					li:last-child
-						text-align: right
-						padding: 0 0 0 20px
+						padding: 0 0 10px 10px
 					+breakpoint($celular)
 						+justify-content(center)
-						text-align: center
 						li:last-child
-							text-align: center
 							padding: 5px
 
 

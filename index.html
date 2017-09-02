@@ -6,21 +6,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/home.css" />
 	<link rel="stylesheet" href="css/geral.css" />
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/plugins.css" />
 </head>
 <body>
+	<nav class="menu-responsivo">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Logo</a></li>
+			<li><a href="#">Vídeo</a></li>
+			<li><a href="#">Ilustração</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="#">Contato</a></li>
+			<!-- <li><a class="toggle-fechar" href="javascript:;"><i class="fa fa-times"></i></a></li> -->
+		</ul>
+	</nav>	
 	<header>
 		<div class="container">
-			<div class="logo">
+			<div class="logo wow slideInLeft" data-wow-duration=".7s" data-wow-delay=".1s">
 				<a href="index.html">
 					<img src="images/logo-topo.png" alt="Logo Topo DC Studios" />
 				</a>
 			</div>
 			
 			<div class="links-topo">
-				<nav>
+				<nav class="wow slideInDown" data-wow-duration=".5s" data-wow-delay=".2s">
 					<ul>
-						<li><a href="index.html">home</a></li>
+						<li><a href="index.html" class="ativo">home</a></li>
 						<li><a href="#">logo</a></li>
 						<li><a href="#">vídeo</a></li>
 						<li><a href="#">ilustração</a></li>
@@ -29,13 +41,17 @@
 					</ul>
 				</nav>
 
-				<ul class="social">
+				<a class="toggle" href="javascript:;">
+					<i class="fa fa-bars"></i>
+				</a>
+
+				<ul class="social wow slideInRight" data-wow-duration=".5s" data-wow-delay=".2s">
 					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 				</ul>
 			</div>
 
-			<div class="slider">
+			<div class="slider wow pulse" data-wow-duration=".4s" data-wow-delay=".3s">
 				<img src="images/slider.png" alt="Slider" />
 			</div>
 		</div>
@@ -43,8 +59,8 @@
 	<main>
 		<section id="identidade">
 			<div class="container">
-				<h1 class="titulop">Identidade Visual</h1>
-				<div class="video-identidade">
+				<h1 class="titulop wow tada" data-wow-duration=".8s" data-wow-delay=".5s">Identidade Visual</h1>
+				<div class="video-identidade wow jello" data-wow-duration=".8s" data-wow-delay=".5s">
 					<img src="images/video-identidade.png" alt="Vídeo Serviços Identidade Visual">
 				</div>
 				<p class="descricao-identidade">
@@ -299,19 +315,28 @@
 						<li>
 							<ul class="preco-cor-vetor">
 								<li>Editar cores com mascote em vetor. Arquivo fornecido para edição em (cdr, ai).</li>
-								<li>R$ <strong>30,00</strong><br><button class="botao pastel-red medio">Escolher</button></li>
+								<li>R$ <strong>30,00</strong></li>
+								<li>
+									<button class="botao pastel-red medio">Escolher</button>
+								</li>
 							</ul>
 						</li>
 						<li>
 							<ul class="preco-cor-png">
 								<li>Editar cores com mascote em imagem. Arquivos fornecidos para edição em (png, jpeg).</li>
-								<li>R$ <strong>60,00</strong><br><button class="botao azul-claro medio">Escolher</button></li>
+								<li>R$ <strong>60,00</strong></li>
+								<li>
+									<button class="botao azul-claro medio">Escolher</button>
+								</li>
 							</ul>
 						</li>
 						<li>
 							<ul class="preco-vetorizar">
 								<li>Vetorizar imagem em (linhas). Arquivos fornecidos em (png, jpeg)</li>
-								<li>R$ <strong>30,00</strong><br><button class="botao palha medio">Escolher</button></li>
+								<li>R$ <strong>30,00</strong></li>
+								<li>
+									<button class="botao palha medio">Escolher</button>
+								</li>
 							</ul>
 						</li>
 					</ul>
@@ -336,60 +361,52 @@
 		<section id="destaques">
 			<div class="container">
 				<h1 class="titulop">Projetos em Destaques</h1>
-			</div>
-			<div class="projetos-destacados">
 				<ul>
 					<li>
-						<figure>
-							<img src="images/destaque/logo.png" alt="placeholder+image">
+						<figure class="imghvr-blur">
+							<img src="images/destaque/art.png" alt="TITULO PROJETO">
 							<figcaption>
-								<h3>Título do projeto</h3>
-								<span>Texto descritivo...</span>
+								<a href="#">
+									<h3>Nome do projeto!</h3>
+									<p>Descrição do projeto!</p>
+								</a>
+								<div class="sobrepor"></div>
 							</figcaption>
 						</figure>
 					</li>
 					<li>
-						<figure>
-							<img src="images/destaque/logo.png" alt="placeholder+image">
+						<figure class="imghvr-blur">
+							<img src="images/destaque/logo.png" alt="TITULO PROJETO">
 							<figcaption>
-								<h3>Título do projeto</h3>
-								<span>Texto descritivo...</span>
+								<a href="#">
+									<h3>Nome do projeto!</h3>
+									<p>Descrição do projeto!</p>
+								</a>
+								<div class="sobrepor"></div>
 							</figcaption>
 						</figure>
 					</li>
 					<li>
-						<figure>
-							<img src="images/destaque/logo.png" alt="placeholder+image">
+						<figure class="imghvr-blur">
+							<img src="images/destaque/logo-2.png" alt="TITULO PROJETO">
 							<figcaption>
-								<h3>Título do projeto</h3>
-								<span>Texto descritivo...</span>
+								<a href="#">
+									<h3>Nome do projeto!</h3>
+									<p>Descrição do projeto!</p>
+								</a>
+								<div class="sobrepor"></div>
 							</figcaption>
 						</figure>
 					</li>
 					<li>
-						<figure>
-							<img src="images/destaque/logo.png" alt="placeholder+image">
+						<figure class="imghvr-blur">
+							<img src="images/destaque/vinheta.png" alt="TITULO PROJETO">
 							<figcaption>
-								<h3>Título do projeto</h3>
-								<span>Texto descritivo...</span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<img src="images/destaque/logo.png" alt="placeholder+image">
-							<figcaption>
-								<h3>Título do projeto</h3>
-								<span>Texto descritivo...</span>
-							</figcaption>
-						</figure>
-					</li>
-					<li>
-						<figure>
-							<img src="images/destaque/logo.png" alt="placeholder+image">
-							<figcaption>
-								<h3>Título do projeto</h3>
-								<span>Texto descritivo...</span>
+								<a href="#">
+									<h3>Nome do projeto!</h3>
+									<p>Descrição do projeto!</p>
+								</a>
+								<div class="sobrepor"></div>
 							</figcaption>
 						</figure>
 					</li>
@@ -449,7 +466,7 @@
 							</li>
 							<li>
 								<p>
-								"Mais um trabalho 100% da galera da DC, recomendo!"
+									"Mais um trabalho 100% da galera da DC, recomendo!"
 								</p>
 							</li>
 							<li>Nome cliente</li>
@@ -505,8 +522,8 @@
 	<footer>
 		<div class="container">
 			<ul class="link-footer">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Portfólio</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="portfolio.html">Portfólio</a></li>
 			</ul>
 		</div>
 		<hr>
@@ -538,7 +555,7 @@
 						<li>contato@dcstudios.com.br</li>
 					</ul>
 				</li>
-			
+
 				<li>
 					<ul>
 						<li><strong>Telefone / Whatsapp</strong></li>
@@ -547,7 +564,7 @@
 						<li>(83) 98794-0537</li>
 					</ul>
 				</li>
-			
+
 				<li>
 					<ul class="cadastraremail">
 						<li><strong>Receba dicas de design <i class="fa fa-level-down"></i></strong></li>
@@ -564,5 +581,40 @@
 			<p class="copyr">DC Studios &copy Todos os direitos reservados.</p>
 		</div>
 	</footer>
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/wow/dist/wow.min.js"></script>
+	<script>
+		$(function(){				
+			$('.toggle').click(function(){
+				$('.menu-responsivo').toggleClass('ativo');
+				$toglefont = $(".toggle i").hasClass("fa-bars");
+				if($toglefont == true) {
+					$('.toggle i').removeClass('fa-bars');
+					$('.toggle i').addClass('fa-times');
+				} else {
+					$('.toggle i').removeClass('fa-times');
+					$('.toggle i').addClass('fa-bars');
+				}
+			});			
+			$('.toggle-fechar').click(function(){
+				$('.menu-responsivo').toggleClass('ativo');
+				$toglefont = $(".toggle i").hasClass("fa-bars");
+				if($toglefont == true) {
+					$('.toggle i').removeClass('fa-bars');
+					$('.toggle i').addClass('fa-times');
+				} else {
+					$('.toggle i').removeClass('fa-times');
+					$('.toggle i').addClass('fa-bars');
+				}
+			});
+			new WOW().init();
+		});
+
+		var host = "dcstudios.com.br"
+		if (window.location.host == host && window.location.protocol != "https:") {
+			window.location.protocol = "https:"
+		}
+	</script>
 </body>
 </html>
