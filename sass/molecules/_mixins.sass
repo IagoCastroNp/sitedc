@@ -42,6 +42,11 @@ $laptop: max-width 1024px
   -webkit-transition: all $transition linear
   transition:         all $transition linear
 
+=scale($value1,$value2)
+  -ms-transform: scale($value1,$value2)
+  -webkit-transform: scale($value1,$value2)
+  transform: scale($value1,$value2)
+
 =border-radius($radius) 
   -webkit-border-radius: $radius
   -moz-border-radius: $radius

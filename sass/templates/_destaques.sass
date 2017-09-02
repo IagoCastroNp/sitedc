@@ -1,66 +1,53 @@
 section#destaques
 	background: #333333
-	.projetos-destacados
+
+	ul
 		+clearfix
-		ul
-			+flexbox
-			+flex-wrap(wrap)
-			+justify-content(space-around)
-			li
-				max-width: 218px
-				width: 100%
-				margin-top: 5px
-				+breakpoint($laptop)
-					max-width: 250px
-					&:nth-child(5),
-					&:nth-child(6)
-						display: none
-				+breakpoint($tablet)
-					max-width: 210px
-					&:nth-child(4),
-					&:nth-child(5),
-					&:nth-child(6)
-						display: none
-				+breakpoint($celular)
-					max-width: 300px
-					&:nth-child(4),
-					&:nth-child(5),
-					&:nth-child(6)
-						display: none
-				figure
-					position: relative
-					img
-						max-width: 220px
-						width: 100%
-						+breakpoint($laptop)
-							max-width: 250px
-						+breakpoint($tablet)
-							max-width: 250px
-						+breakpoint($celular)
-							max-width: 300px
-							display: block
-					figcaption
-						display: block
+		+make-row
+
+		li
+			+make-sm-column(3)
+			+make-xs-column(6)
+			overflow: hidden
+			+breakpoint($celular)
+				margin-bottom: 10px
+
+			[class^='imghvr-'],
+			[class*=' imghvr-']
+				background: #222222
+			figure
+				position: relative
+
+				img
+					+img-responsive
+
+				figcaption
+					a
+						text-align: center
+						// position: absolute
+						z-index: 2
+						color: $branco
 						width: 100%
 						height: 100%
+						top: 40%
+						// +opacity(0)
+
+						h3
+							text-transform: uppercase
+							+font-size(22px)
+							margin: 0
+						p
+							+font-size(18px)
+					a,
+					.sobrepor
+						// +transition(.3s)
+
+					.sobrepor
+						+gradient(210deg, $vermelho, $arsenic)
+						// +opacity(.8)
+						// +scale(0,0)
 						position: absolute
 						top: 0
 						left: 0
-						background: rgba(0,0,0,.2)
-						color: $branco
-						h3
-							display: block
-							width: 100%
-							margin: 0
-							padding: 5px 10px
-							text-align: right
-							+font-size(15pt)
-							background: rgba(0,0,0,.2)
-						span
-							display: block
-							width: 100%
-							padding: 5px 10px
-							position: absolute
-							bottom: 0
-							+font-size(15pt)
-							background: rgba(0,0,0,.2)
+						width: 100%
+						height: 100%
