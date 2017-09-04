@@ -9,20 +9,47 @@
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/plugins.css" />
 </head>
-<body>
+<body id="start">
+	<!-- container modal -->
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Conteudo aqui!
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- menu responsivo -->
 	<nav class="menu-responsivo">
 		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Logo</a></li>
-			<li><a href="#">Vídeo</a></li>
-			<li><a href="#">Ilustração</a></li>
+			<li><a href="#start" class="scrollSuave">Home</a></li>
+			<li><a href="#identidade" class="scrollSuave">Logo</a></li>
+			<li><a href="#producaov" class="scrollSuave">Vídeo</a></li>
+			<li><a href="#ilustracao" class="scrollSuave">Ilustração</a></li>
 			<li><a href="portfolio.html">Portfolio</a></li>
-			<li><a href="#">Contato</a></li>
-			<!-- <li><a class="toggle-fechar" href="javascript:;"><i class="fa fa-times"></i></a></li> -->
+			<li><a href="#contato" class="scrollSuave">Contato</a></li>
 		</ul>
 	</nav>	
 	<header>
 		<div class="container">
+			<!-- scrollTop -->
+			<a href="#start" class="scrollSuave scrollTop">
+				<i class="fa fa-arrow-circle-up"></i>
+			</a>
+
+			<!-- logo do topo dc studios -->
 			<div class="logo wow slideInLeft" data-wow-duration=".7s" data-wow-delay=".1s">
 				<a href="index.html">
 					<img src="images/logo-topo.png" alt="Logo Topo DC Studios" />
@@ -30,42 +57,51 @@
 			</div>
 			
 			<div class="links-topo">
+				<!-- menu desktop -->
 				<nav class="wow slideInDown" data-wow-duration=".5s" data-wow-delay=".2s">
 					<ul>
-						<li><a href="index.html" class="ativo">home</a></li>
-						<li><a href="#">logo</a></li>
-						<li><a href="#">vídeo</a></li>
-						<li><a href="#">ilustração</a></li>
-						<li><a href="portfolio.html">portfólio</a></li>
-						<li><a href="#">contato</a></li>
+						<li><a href="#home" class="scrollSuave ativo">Home</a></li>
+						<li><a href="#identidade" class="scrollSuave">Logo</a></li>
+						<li><a href="#producaov" class="scrollSuave">Vídeo</a></li>
+						<li><a href="#ilustracao" class="scrollSuave">Ilustração</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="#contato" class="scrollSuave">Contato</a></li>
 					</ul>
 				</nav>
 
+				<!-- botão toggle ativar menu responsivo -->
 				<a class="toggle" href="javascript:;">
 					<i class="fa fa-bars"></i>
 				</a>
 
+				<!-- redes sociais topo -->
 				<ul class="social wow slideInRight" data-wow-duration=".5s" data-wow-delay=".2s">
 					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 				</ul>
 			</div>
 
+			<!-- slide ou imagem top -->
 			<div class="slider wow pulse" data-wow-duration=".4s" data-wow-delay=".3s">
 				<img src="images/slider.png" alt="Slider" />
 			</div>
 		</div>
 	</header>
 	<main>
+		<!-- sessão identidade visual -->
 		<section id="identidade">
 			<div class="container">
-				<h1 class="titulop wow tada" data-wow-duration=".8s" data-wow-delay=".5s">Identidade Visual</h1>
+				<h1 class="titulop wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">Identidade Visual</h1>
+				
+				<!-- video identidade visual -->
 				<div class="video-identidade wow rubberBand" data-wow-duration=".8s" data-wow-delay=".5s">
 					<img src="images/video-identidade.png" alt="Vídeo Serviços Identidade Visual">
 				</div>
-				<p class="descricao-identidade wow zoomInDown" data-wow-duration="1s" data-wow-delay=".1s">
+				<!-- texto descrição idetidade visual -->
+				<p class="descricao-identidade wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptate itaque pariatur laudantium dolorum, perferendis et temporibus architecto maxime rerum, id accusamus cum autem quibusdam animi nesciunt, eligendi ipsum nostrum?
 				</p>
+				<!-- preços identidade visual -->
 				<div class="tabela-identidade-preco">
 					<ul>
 						<li>
@@ -128,7 +164,8 @@
 						</li>
 					</ul>
 				</div>
-				<table class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+				<!-- tabela informação planos identidade visual -->
+				<table class="wow fadeIn" data-wow-duration="1s" data-wow-delay=".2s">
 					<thead>
 						<tr>
 							<th>Pacotes prontos &nbsp;&nbsp;<i class="fa fa-arrow-right"></i></th>
@@ -217,15 +254,20 @@
 				</table>
 			</div>
 		</section>
+		<!-- sessão produção de vídeos -->
 		<section id="producaov">
 			<div class="container">
 				<h1 class="titulop wow tada" data-wow-duration=".8s" data-wow-delay=".5s">Produção de Vídeos</h1>
-				<div class="video-identidade wow rubberBand" data-wow-duration=".8s" data-wow-delay=".5s">
+				
+				<!-- video produção de vídeos -->
+				<div class="video-producaov wow rubberBand" data-wow-duration=".8s" data-wow-delay=".5s">
 					<img src="images/video-producao.png" alt="Vídeo Serviços Produção de Vídeos">
 				</div>
-				<p class="descricao-identidade wow zoomInDown" data-wow-duration="1s" data-wow-delay=".1s">
+				<!-- descrição produção de vídeos -->
+				<p class="descricao-producaov wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptate itaque pariatur laudantium dolorum, perferendis et temporibus architecto maxime rerum, id accusamus cum autem quibusdam animi nesciunt, eligendi ipsum nostrum?
 				</p>
+				<!-- preços produção de vídeos -->
 				<div class="tabela-producaov-preco">
 					<ul>
 						<li>
@@ -286,14 +328,17 @@
 				</div>
 			</div>
 		</section>
+		<!-- sessão ilustração 2d -->
 		<section id="ilustracao">
 			<div class="container">
 				<h1 class="titulop wow tada" data-wow-duration=".8s" data-wow-delay=".5s">Ilustração 2D</h1>
+
+				<!-- ilustração criando mascote -->
 				<div class="criar-mascote">
 					<figure class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">
 						<img src="images/ilustracao/chars-draw.png" alt="Criar Mascote">
 					</figure>
-					<ul class=" wow lightSpeedIn" data-wow-duration=".8s" data-wow-delay=".5s">
+					<ul class=" wow pulse" data-wow-duration=".8s" data-wow-delay=".5s">
 						<li>Criamos primeiro o rascunho</li>
 						<li>Após sua aprovação iremos vetorizar, colorir e detalhar!</li>
 						<li>Dessa forma, garantimos que a ideia trabalhada em seu desenho chegue a uma conclusão mais rápida por etapas!</li>
@@ -304,16 +349,19 @@
 					</ul>
 				</div>
 				<hr />
-				<p class="descricao-cor-vetorizar wow zoomInDown" data-wow-duration=".8s" data-wow-delay=".5s">
+				<!-- ilustração descrição sobre cores e vetores -->
+				<p class="descricao-cor-vetorizar wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptate itaque pariatur laudantium dolorum, perferendis et temporibus architecto maxime rerum.
 				</p>
+				<!-- ilustração editando o mascote -->
 				<div class="editar-mascote">
 					<figure class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">
 						<img src="images/ilustracao/chars-cor-vetor.png" alt="Cores e Vetores">
 					</figure>
+					<!-- valores de edições do mascote -->
 					<ul>
 						<li>
-							<ul class="preco-cor-vetor wow lightSpeedIn" data-wow-duration=".8s" data-wow-delay=".2s">
+							<ul class="preco-cor-vetor wow rubberBand" data-wow-duration=".8s" data-wow-delay=".2s">
 								<li>Editar cores com mascote em vetor. Você precisa nos enviar em (cdr, ai).</li>
 								<li>R$ <strong>30,00</strong></li>
 								<li>
@@ -322,7 +370,7 @@
 							</ul>
 						</li>
 						<li>
-							<ul class="preco-cor-png wow lightSpeedIn" data-wow-duration=".8s" data-wow-delay=".5s">
+							<ul class="preco-cor-png wow rubberBand" data-wow-duration=".8s" data-wow-delay=".5s">
 								<li>Editar cores com mascote em imagem. Você precisa noas enviar em (png, jpeg).</li>
 								<li>R$ <strong>60,00</strong></li>
 								<li>
@@ -331,7 +379,7 @@
 							</ul>
 						</li>
 						<li>
-							<ul class="preco-vetorizar wow lightSpeedIn" data-wow-duration=".8s" data-wow-delay=".8s">
+							<ul class="preco-vetorizar wow rubberBand" data-wow-duration=".8s" data-wow-delay=".8s">
 								<li>Vetorizar imagem em (linhas). Você precisa nos enviar em (png, jpeg)</li>
 								<li>R$ <strong>30,00</strong></li>
 								<li>
@@ -342,8 +390,12 @@
 					</ul>
 				</div>
 				<hr />
+				<!-- ilustração editando as posições e face do mascote -->
 				<div class="editar-posicoes">
-					<ul class="descricao-criar-mascote wow lightSpeedIn" data-wow-duration=".8s" data-wow-delay=".5s">
+					<figure class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay="1.2s">
+						<img src="images/ilustracao/chars-position.png" alt="Criar ou Editar Posições">
+					</figure>
+					<ul class="descricao-criar-mascote wow pulse" data-wow-duration=".8s" data-wow-delay=".5s">
 						<li>Crie novas posições para seu mascote!</li>
 						<li>Com varias posições você pode fazer animações, anúncios e muitos mais!</li>
 						<li>Enviaremos um briefing para que seja preenchido, após as informações passadas iremos trabalhar nos ângulos e posições...</li>
@@ -352,15 +404,15 @@
 						</li>
 						<li>por R$ <strong>47,15</strong> à vista ou 3x de R$ <strong>16,66</strong></li>
 					</ul>
-					<figure class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">
-						<img src="images/ilustracao/chars-position.png" alt="Criar ou Editar Posições">
-					</figure>
 				</div>
 			</div>
 		</section>
+		<!-- sessoa destaques -->
 		<section id="destaques">
 			<div class="container">
 				<h1 class="titulop wow tada" data-wow-duration=".8s" data-wow-delay=".5s">Projetos em Destaques</h1>
+				
+				<!-- itens em destaque no portfólio -->
 				<ul>
 					<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".2s">
 						<figure class="imghvr-blur">
@@ -413,20 +465,24 @@
 				</ul>
 			</div>
 		</section>
+		<!-- sessao workana -->
 		<section id="workana">
 			<div class="container">
 				<h1 class="titulop wow tada" data-wow-duration=".8s" data-wow-delay=".5s">Cliente no Workana</h1>
-				<p class="descricao-workana wow zoomInDown" data-wow-duration=".8s" data-wow-delay=".5s">
+
+				<!-- descrevendo serviços pelo workana -->
+				<p class="descricao-workana wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">
 					Nós também disponibilizamos como forma de pagamento o workana, ela é uma plataforma
 					de desenvolvimento de projetos, onde ela faz a intermidiação dos dois lados, garantindo o trabalho
 					feito pelo design e o pagamento feito pelo cliente.<br /><br />
 					Abaixo confira os comentários recentes de clientes que realizaram projetos com a DC Studios.
 				</p>
+				<!-- comentários e qualificações enviadas pelo cliente -->
 				<ul class="comentarios">
 					<li>
 						<ul>
-							<li class=" wow shake" data-wow-duration=".8s" data-wow-delay=".2s">
-								<img src="images/workana/foto.png" alt="Foto Iago">
+							<li class=" wow pulse" data-wow-duration=".8s" data-wow-delay=".2s">
+								<img class="img-circle" src="images/workana/foto.png" alt="Foto Iago">
 							</li>
 							<li class=" wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
 								<p>
@@ -443,8 +499,8 @@
 					</li>
 					<li>
 						<ul>
-							<li class=" wow shake" data-wow-duration=".8s" data-wow-delay=".5s">
-								<img src="images/workana/foto.png" alt="Foto Iago">
+							<li class=" wow pulse" data-wow-duration=".8s" data-wow-delay=".5s">
+								<img class="img-circle" src="images/workana/foto.png" alt="Foto Iago">
 							</li>
 							<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".8s">
 								<p>
@@ -461,8 +517,8 @@
 					</li>
 					<li>
 						<ul>
-							<li class=" wow shake" data-wow-duration=".8s" data-wow-delay=".8s">
-								<img src="images/workana/foto.png" alt="Foto Iago">
+							<li class=" wow pulse" data-wow-duration=".8s" data-wow-delay=".8s">
+								<img class="img-circle" src="images/workana/foto.png" alt="Foto Iago">
 							</li>
 							<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay="1.1s">
 								<p>
@@ -480,10 +536,13 @@
 				</ul>
 			</div>
 		</section>
+		<!-- sessão contato -->
 		<section id="contato">
 			<div class="container">
 				<h1 class="titulop wow tada" data-wow-duration=".8s" data-wow-delay=".5s">Contato</h1>
-				<form class=" wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".5s">
+
+				<!-- formulário de contato -->
+				<form class=" wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".9s">
 					<div class="cols">
 						<div class="col">
 							<div class="form-group">
@@ -497,7 +556,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="icon-select"></i>
+						<div class="icon-select">
 							<select name="" id="">
 								<option>Selecioine o serviço...</option>
 								<option value="">Identidade Visual - 15%</option>
@@ -514,12 +573,14 @@
 					</div>
 				</form>
 			</div>
-			<div class="mapa-google-escritorio  wow fadeIn" data-wow-duration=".8s" data-wow-delay="1s">
+			<!-- endereço no google maps -->
+			<div class="mapa-google-escritorio  wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3333.401755163445!2d-36.349511415053556!3d-6.508380805811629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1504242043040" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</section>
 	</main>
 	<footer>
+		<!-- footer menu -->
 		<div class="container">
 			<ul class="link-footer">
 				<li><a href="index.html">Home</a></li>
@@ -529,6 +590,7 @@
 		<hr>
 		<div class="container">		
 			<div class="social-footer">
+				<!-- footer links de redes sociais -->
 				<ul>
 					<li class=" wow pulse" data-wow-duration=".8s" data-wow-delay=".5s">
 						<a href="#">
@@ -543,19 +605,21 @@
 						</a>
 					</li>
 				</ul>
-				<p class=" wow zoomInDown" data-wow-duration=".8s" data-wow-delay="1.5s"">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus consectetur, non quis neque ab est cupiditate. Sapiente id ea hic doloremque, blanditiis optio accusamus a, tenetur, quod et aspernatur officiis.</p>
+				<!-- footer texto agradecimento -->
+				<p class=" wow fadeIn" data-wow-duration="1.8s" data-wow-delay=".8s"">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus consectetur, non quis neque ab est cupiditate. Sapiente id ea hic doloremque, blanditiis optio accusamus a, tenetur, quod et aspernatur officiis.</p>
 			</div>
 		</div>
 		<hr>
 		<div class="container">
 			<ul class="contato-footer">
+				<!-- footer email -->
 				<li>
 					<ul>
 						<li><strong>Email</strong></li>
 						<li>contato@dcstudios.com.br</li>
 					</ul>
 				</li>
-
+				<!-- footer telefone ou whatsapp -->
 				<li>
 					<ul>
 						<li><strong>Telefone / Whatsapp</strong></li>
@@ -564,7 +628,7 @@
 						<li>(83) 98794-0537</li>
 					</ul>
 				</li>
-
+				<!-- footer cadastro email dicas -->
 				<li>
 					<ul class="cadastraremail">
 						<li><strong>Receba dicas de design <i class="fa fa-level-down"></i></strong></li>
@@ -585,7 +649,8 @@
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/wow/dist/wow.min.js"></script>
 	<script>
-		$(function(){				
+		$(function(){		
+			// inicio funções menu responsivo		
 			$('.toggle').click(function(){
 				$('.menu-responsivo').toggleClass('ativo');
 				$toglefont = $(".toggle i").hasClass("fa-bars");
@@ -596,7 +661,7 @@
 					$('.toggle i').removeClass('fa-times');
 					$('.toggle i').addClass('fa-bars');
 				}
-			});			
+			});
 			$('.toggle-fechar').click(function(){
 				$('.menu-responsivo').toggleClass('ativo');
 				$toglefont = $(".toggle i").hasClass("fa-bars");
@@ -608,6 +673,9 @@
 					$('.toggle i').addClass('fa-bars');
 				}
 			});
+			// fim funções menu responsivo
+			
+			// inicia evento wow
 			new WOW().init();
 		});
 
@@ -615,6 +683,24 @@
 		if (window.location.host == host && window.location.protocol != "https:") {
 			window.location.protocol = "https:"
 		}
+
+		// enveto esconder e mostrar botão scrolltop
+		$(window).scroll(function(){
+			if($(document).scrollTop() > 200){
+				$('.scrollTop').fadeIn('slow');
+			} else { 
+				$('.scrollTop').fadeOut('slow');
+			} 
+		});
+
+		// evento ir para o top
+		var body = $("html, body");
+		$('.scrollSuave').click(function() {
+			body.animate({
+				scrollTop: $( $.attr(this, 'href') ).offset().top
+			}, 800);
+			return false;
+		});
 	</script>
 </body>
 </html>

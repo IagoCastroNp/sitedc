@@ -1,11 +1,73 @@
 header
-	background: #565278
+	background:
+		image: url('../images/bg-portfolio.png')
+		repeat: no-repeat
+		position: bottom center
+		size: cover
+		color: #565278
+	max-height: 390px
 	&:after
-		// +gradient(90deg, #ff1e4a, #F00)
-section#destaques
-	background: #333333
-
-	ul
+		+gradient(90deg, #ff1e4a, #fe9842)
+section.portfolio
+	background: #f1f1f1
+	.titulop
+		+breakpoint($celular)
+			+font-size(20pt)
+	.menu-portfolio
+		+clearfix
+		form
+			color: $arsenic
+		.cols
+			+make-row
+		.col
+			+make-sm-column(6)
+			.search
+				+justify-content(flex-end)
+				margin-bottom: 10px
+			.inline
+				+flexbox
+				+breakpoint($celular)
+					+flex-wrap(wrap)
+					+justify-content(center)
+					margin-bottom: 10px
+			label
+				padding-top: 5px
+				margin-right: 10px
+			input[type="text"]
+				width: 60%
+				min-width: 200px
+				font-style: italic
+			button
+				border: none
+				color: $branco
+				padding: 5px 20px
+				background: $arsenic
+			.icon-select
+				padding: 0
+				display: table
+				background: 
+					image: url(../images/contato/icon-select.png)
+					repeat: no-repeat
+					position: center right 9px
+					color: $arsenic
+					size: 20px 20px
+				select
+					border-color: transparent
+					color: $branco
+					display: table
+					padding-right: 35px
+					margin: 0
+					width: 100%
+					background: transparent
+					-webkit-appearance: none
+					-moz-appearance:    none
+					appearance:         none
+					option
+						color: $arsenic
+			input,
+			select
+				padding: 5px
+	ul.lista
 		+clearfix
 		+make-row
 
@@ -13,9 +75,9 @@ section#destaques
 			+make-sm-column(3)
 			+make-xs-column(6)
 			overflow: hidden
-			margin-top: 10px
+			margin-top: 30px
 			+breakpoint($celular)
-				margin-bottom: 10px
+				margin: 0px auto
 
 			[class^='imghvr-'],
 			[class*=' imghvr-']
@@ -23,7 +85,6 @@ section#destaques
 			figure
 				position: relative
 				border: thin solid #999
-				// +border-radius(20px)
 
 				img
 					+img-responsive
@@ -31,13 +92,14 @@ section#destaques
 				figcaption
 					a
 						text-align: center
-						// position: absolute
 						z-index: 2
 						color: $branco
 						width: 100%
 						height: 100%
-						top: 40%
-						// +opacity(0)
+						display: block
+						+flexbox
+						+flex-direction(column)
+						+justify-content(center)
 
 						h3
 							text-transform: uppercase
@@ -45,16 +107,35 @@ section#destaques
 							margin: 0
 						p
 							+font-size(18px)
-					a,
-					.sobrepor
-						// +transition(.3s)
 
 					.sobrepor
-						+gradient(210deg, $vermelho, $arsenic)
-						// +opacity(.8)
-						// +scale(0,0)
+						+gradient(90deg, #ff1e4a, #fe9842)
 						position: absolute
 						top: 0
 						left: 0
 						width: 100%
 						height: 100%
+section.projeto
+	padding-bottom: 20px
+	.menu-portfolio
+		color: $arsenic
+		margin-top: 30px
+		h2
+			margin: 0
+			+breakpoint($tablet)
+				+font-size(25pt)
+	.cols
+		+make-row
+	.col
+		+make-sm-column(6)
+
+	.descricao-projeto
+
+	ul
+		&:not(.descricao-projeto)
+			li
+				+make-sm-column(4)
+				figure
+					border: none
+	ul
+		margin-top: 30px

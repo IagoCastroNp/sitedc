@@ -1,9 +1,6 @@
 header
 	+clearfix
-	// min-height: 510px
 	position: relative
-	overflow: hidden
-
 	&:after
 		content: ""
 		display: block
@@ -11,8 +8,32 @@ header
 		top: 100%
 		width: 100%
 		height: 3px
-		// +gradient(90deg, #ff1e4a, #fe9842)
-		
+	
+	// scrollTop
+	.scrollTop
+		position: fixed
+		display: none
+		right: 2%
+		bottom: 5%
+		color: $branco
+		padding: 0 9px
+		+gradient(0deg, #ff1e4a, #fe9842)
+		+border-radius(120px)
+		+font-size(50px)
+		z-index: 10
+		+transition(.3s)
+		&:focus
+			color: $branco
+			+gradient(120deg, #ff1e4a, #fe9842)
+		&:active,
+		&:hover
+			color: $branco
+			background: $arsenic
+
+		+breakpoint($tablet)
+			+font-size(40px)
+			padding: 0 6px
+
 	.logo
 		float: left
 		margin: 20px 30px 0 
@@ -89,6 +110,22 @@ header
 		margin: 100px auto 30px auto
 		display: table
 		text-align: center
+		h1
+			border: 3px solid #fe9842
+			color: #fe9842
+			padding: 10px
+			+font-size(25pt)
+			margin: 0 0 45px 0
+			text-transform: uppercase
+			+breakpoint($celular)
+				+font-size(15pt)
+				margin: 15px 0 10px 0
+			+breakpoint($tablet)
+				+font-size(25pt)
+				margin: 15px 0 10px 0
+			+breakpoint($laptop)
+				+font-size(25pt)
+				margin: 10px 0 15px 0
 		img
 			max-width: 549px
 			max-hegiht: 272px
