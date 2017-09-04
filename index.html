@@ -5,28 +5,68 @@
 	<title>DC Studios - Criação de logo e vídeos</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/home.css" />
+	<link rel="stylesheet" href="css/jquery.steps.css">
 	<link rel="stylesheet" href="css/geral.css" />
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/plugins.css" />
 </head>
 <body id="start">
 	<!-- container modal -->
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<!-- Modal para escolhe da forma de pagamento -->
+	<div class="modal fade" id="modoPagamento" tabindex="-1" role="dialog" aria-labelledby="modoPagamento" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<h5 class="modal-title">Painel de opções de pagamento</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
-					Conteudo aqui!
+					<div class="etapa-pagamento">
+						<!-- pgt -->
+						<form action="#" id="etapa-pagamento">
+							<div>
+								<span class="icon-titulo"><i class="fa fa-pencil-square-o"></i></span>
+								<section>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, qui ut! Deserunt laboriosam ipsam ullam, repellat quae dolore accusantium, doloribus, provident voluptas eaque minus et quo rem aliquam ipsa officia!Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br ><br>Quos, qui ut! Deserunt laboriosam ipsam ullam, repellat quae dolore accusantium, doloribus, provident voluptas eaque minus et quo rem aliquam ipsa officia!</p>
+									<div class="regrasPagto">
+										<input id="confirmRules" name="confirmRules" type="checkbox" class="required">
+										<input id="price" name="price" type="hidden" value="">
+										<span>Eu li, e concordo!</span>
+									</div>
+								</section>
+								<span><i class="fa fa-credit-card"></i></span>
+								<section>
+									<ul>
+										<li>Pagseguro</li>
+										<li>Banco do Brasil</li>
+										<li>Workana</li>
+									</ul>
+								</section>
+								<span><i class="fa fa-check"></i></span>
+								<section>
+									<ul>
+										<li>Foo</li>
+										<li>Bar</li>
+										<li>Foobar</li>
+									</ul>
+								</section>
+								<span><i class="fa fa-thumbs-o-up"></i></span>
+								<section>
+									<ul>
+										<li>Foo</li>
+										<li>Bar</li>
+										<li>Foobar</li>
+									</ul>
+								</section>
+							</div>
+						</form>
+					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button type="button" class="botao acafrao medio" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="botao verde-mar medio confirmaPagto">Concordo</button>
 				</div>
 			</div>
 		</div>
@@ -55,7 +95,7 @@
 					<img src="images/logo-topo.png" alt="Logo Topo DC Studios" />
 				</a>
 			</div>
-			
+
 			<div class="links-topo">
 				<!-- menu desktop -->
 				<nav class="wow slideInDown" data-wow-duration=".5s" data-wow-delay=".2s">
@@ -92,7 +132,7 @@
 		<section id="identidade">
 			<div class="container">
 				<h1 class="titulop wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">Identidade Visual</h1>
-				
+
 				<!-- video identidade visual -->
 				<div class="video-identidade wow rubberBand" data-wow-duration=".8s" data-wow-delay=".5s">
 					<img src="images/video-identidade.png" alt="Vídeo Serviços Identidade Visual">
@@ -114,7 +154,7 @@
 								<li>R$ <strong class="preco">33,33</strong></li>
 								<li>ou R$ 95,30 à vista</li>
 								<li>
-									<button class="botao turquesa full">Selecionar</button>
+									<button type="button" class="botao turquesa full btnPagto" data-toggle="modal" data-target="#modoPagamento" value="95,30">Selecionar</button>
 								</li>
 							</ul>
 						</li>
@@ -129,7 +169,7 @@
 								<li>R$ <strong class="preco">70,00</strong></li>
 								<li>ou R$ 199,04 à vista</li>
 								<li>
-									<button class="botao palha full">Selecionar</button>
+									<button type="button" class="botao palha full btnPagto" data-toggle="modal" data-target="#modoPagamento" value="199,04">Selecionar</button>
 								</li>
 							</ul>
 						</li>
@@ -147,7 +187,7 @@
 								<li>R$ <strong class="preco">146,66</strong></li>
 								<li>ou R$ 415,94 à vista</li>
 								<li>
-									<button class="botao acafrao full">Selecionar</button>
+									<button type="button" class="botao acafrao full btnPagto" data-toggle="modal" data-target="#modoPagamento" value="415,94">Selecionar</button>
 								</li>
 							</ul>
 						</li>
@@ -258,7 +298,7 @@
 		<section id="producaov">
 			<div class="container">
 				<h1 class="titulop wow tada" data-wow-duration=".8s" data-wow-delay=".5s">Produção de Vídeos</h1>
-				
+
 				<!-- video produção de vídeos -->
 				<div class="video-producaov wow rubberBand" data-wow-duration=".8s" data-wow-delay=".5s">
 					<img src="images/video-producao.png" alt="Vídeo Serviços Produção de Vídeos">
@@ -280,7 +320,7 @@
 								<li>R$ <strong class="preco">13,33</strong></li>
 								<li>ou R$ 37,72 à vista</li>
 								<li>
-									<button class="botao rubi full">Selecionar</button>
+									<button type="button" class="botao rubi full btnPagto" data-toggle="modal" data-target="#modoPagamento" value="37,72">Selecionar</button>
 								</li>
 							</ul>
 						</li>
@@ -294,7 +334,7 @@
 								<li>R$ <strong class="preco">26,66</strong></li>
 								<li>ou R$ 75,44 à vista</li>
 								<li>
-									<button class="botao rubi full">Selecionar</button>
+									<button type="button" class="botao rubi full btnPagto" data-toggle="modal" data-target="#modoPagamento" value="75,44">Selecionar</button>
 								</li>
 							</ul>
 						</li>
@@ -308,7 +348,7 @@
 								<li>R$ <strong class="preco">40,00</strong></li>
 								<li>ou R$ 113,16 à vista</li>
 								<li>
-									<button class="botao rubi full">Selecionar</button>
+									<button type="button" class="botao rubi full btnPagto" data-toggle="modal" data-target="#modoPagamento" value="113,16">Selecionar</button>
 								</li>
 							</ul>
 						</li>
@@ -343,7 +383,7 @@
 						<li>Após sua aprovação iremos vetorizar, colorir e detalhar!</li>
 						<li>Dessa forma, garantimos que a ideia trabalhada em seu desenho chegue a uma conclusão mais rápida por etapas!</li>
 						<li>
-							<button class="botao acafrao full">Quero criar um mascote</button>
+							<button type="button" class="botao acafrao full btnPagto" data-toggle="modal" data-target="#modoPagamento" value="94,30">Quero criar um mascote</button>
 						</li>
 						<li>por R$ <strong>94,30</strong> a vista ou 3x de R$ <strong>33,33</strong></li>
 					</ul>
@@ -411,7 +451,7 @@
 		<section id="destaques">
 			<div class="container">
 				<h1 class="titulop wow tada" data-wow-duration=".8s" data-wow-delay=".5s">Projetos em Destaques</h1>
-				
+
 				<!-- itens em destaque no portfólio -->
 				<ul>
 					<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".2s">
@@ -646,8 +686,11 @@
 		</div>
 	</footer>
 
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="bower_components/wow/dist/wow.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/jquery.steps.min.js"></script>
 	<script>
 		$(function(){		
 			// inicio funções menu responsivo		
@@ -701,6 +744,59 @@
 			}, 800);
 			return false;
 		});
-	</script>
+
+		// etapas de pagamento
+		var form = $("#etapa-pagamento").show();
+		
+		form.validate({
+			errorPlacement: function errorPlacement(error, element) { 
+				element.before(error); },
+				rules: {
+					confirmRules: {
+						equalTo: "#confirmRules"
+					}
+				},
+				messages:{
+					confirmRules: {
+						required: "Campo requerido para prosseguir!"
+					}
+				}
+			});
+		form.children("div").steps({
+			labels: {
+				cancel: "Cancelar",
+				current: "current step:",
+				pagination: "Pagination",
+				finish: "Concluir",
+				next: "Continuar",
+				previous: "Voltar",
+				loading: "Carregando ..."
+			},
+			headerTag: "span",
+			bodyTag: "section",
+			transitionEffect: "fade",
+			onStepChanging: function (event, currentIndex, newIndex)
+			{
+				form.validate().settings.ignore = ":disabled,:hidden";
+				return form.valid();
+			},
+			onFinishing: function (event, currentIndex)
+			{
+				form.validate().settings.ignore = ":disabled";
+				return form.valid();
+			},
+			onFinished: function (event, currentIndex)
+			{
+				alert("Submitted!");
+			}
+		});
+		// pegando valores de botões
+		$(function(){
+			$('.btnPagto').click(function() {
+				novoValor = $(this).val();
+				$("#price").val(novoValor);
+			})
+		})
+</script>
 </body>
 </html>
