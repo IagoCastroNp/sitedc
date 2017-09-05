@@ -31,18 +31,39 @@
 								<section>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, qui ut! Deserunt laboriosam ipsam ullam, repellat quae dolore accusantium, doloribus, provident voluptas eaque minus et quo rem aliquam ipsa officia!Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br ><br>Quos, qui ut! Deserunt laboriosam ipsam ullam, repellat quae dolore accusantium, doloribus, provident voluptas eaque minus et quo rem aliquam ipsa officia!</p>
 									<div class="regrasPagto">
-										<input id="confirmRules" name="confirmRules" type="checkbox" class="required">
+										<label for="confirmRules">
+											<input id="confirmRules" name="confirmRules" type="checkbox" class="required">
+											<span>Eu li, e concordo!</span>
+										</label>
 										<input id="price" name="price" type="hidden" value="">
-										<span>Eu li, e concordo!</span>
 									</div>
 								</section>
 								<span><i class="fa fa-credit-card"></i></span>
-								<section>
+								<section class="modoPagamento">
 									<ul>
-										<li>Pagseguro</li>
-										<li>Banco do Brasil</li>
-										<li>Workana</li>
+										<li>
+											<label for="modoPagseguro">
+												<img src="images/modal/pagseguro.png" alt="Icone de pagamento para pagseguro">
+												<input id="modoPagseguro" type="radio" name="modoPagto" value="pagseguro" class="required modoPagto">
+												<span>desconto -5,7% (boleto)</span>
+											</label>
+										</li>
+										<li>
+											<label for="modoBB">
+												<img src="images/modal/Banco-do-Brasil.png" alt="Icone de pagamento para Banco do Brasil">
+												<input id="modoBB" type="radio" name="modoPagto" value="bancodobrasil" class="required modoPagto">
+												<span>desconto -10%</span>
+											</label>
+										</li>
+										<li>
+											<label for="modoWorkana">
+												<img src="images/modal/Workana.png" alt="Icone de pagamento para workana">
+												<input id="modoWorkana" type="radio" name="modoPagto" value="workana" class="required modoPagto">
+												<span>Aumento de +/- 15%</span>
+											</label>
+										</li>
 									</ul>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam cupiditate, suscipit quisquam. Amet ipsa, iure ad eligendi veritatis maiores, obcaecati!</p>
 								</section>
 								<span><i class="fa fa-check"></i></span>
 								<section>
@@ -690,7 +711,7 @@
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/wow.min.js"></script>
-	<script src="js/jquery.steps.min.js"></script>
+	<script src="js/jquery.steps.js"></script>
 	<script>
 		$(function(){		
 			// inicio funções menu responsivo		
@@ -747,18 +768,23 @@
 
 		// etapas de pagamento
 		var form = $("#etapa-pagamento").show();
-		
 		form.validate({
 			errorPlacement: function errorPlacement(error, element) { 
 				element.before(error); },
 				rules: {
-					confirmRules: {
-						equalTo: "#confirmRules"
+					modoPagto: {
+						required: ".modoPagto"
 					}
 				},
 				messages:{
 					confirmRules: {
 						required: "Campo requerido para prosseguir!"
+					},
+					price: {
+						required: "Algum erro ocorreu com este botão, por favor, contacte nossos administradores!"
+					},
+					modoPagto: {
+						required: "Escolha uma forma de pagamento antes de prosseguir!"
 					}
 				}
 			});
@@ -772,13 +798,20 @@
 				previous: "Voltar",
 				loading: "Carregando ..."
 			},
+			titleTemplate: "#title#",
 			headerTag: "span",
 			bodyTag: "section",
+			saveState: false,
 			transitionEffect: "fade",
 			onStepChanging: function (event, currentIndex, newIndex)
 			{
-				form.validate().settings.ignore = ":disabled,:hidden";
-				return form.valid();
+				if(currentIndex === 0){
+					form.validate().settings.ignore = ":disabled,:hidden";
+					return form.valid();
+				}else{
+					form.validate().settings.ignore = ":disabled";
+					return form.valid();
+				}
 			},
 			onFinishing: function (event, currentIndex)
 			{
@@ -795,8 +828,11 @@
 			$('.btnPagto').click(function() {
 				novoValor = $(this).val();
 				$("#price").val(novoValor);
+				$(".wizard").steps('getStep');
+				// $('#etapa-pagamento')[0].reset();
+				// $ (".wizard").steps('reset');
 			})
 		})
-</script>
+	</script>
 </body>
 </html>
