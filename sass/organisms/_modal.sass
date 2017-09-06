@@ -11,7 +11,7 @@
 			background: #f1f1f1
 			border: none
 			padding: 5px 10px
-			+border-radius(120px)
+			+border-radius(5px)
 			&:hover
 				background: #ff9933
 				color: $branco
@@ -19,6 +19,7 @@
 	.modal-body
 		background: #f1f1f1
 		margin: 0 10px
+		padding: 15px 3px 0
 		+border-radius(4px)
 
 	.modal-footer
@@ -51,6 +52,41 @@
 		> .title
 			position: absolute;
 			left: -999em;
+// barra de progreeso
+#bar
+	+flexbox
+	+align-items(center)
+	+justify-content(center)
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 26.4%
+
+	.progress-bar,
+	.current-bar,
+	.done-bar
+		height: 10px
+
+	.progress-bar
+		position: relative
+		background: #cdcdd0
+		width: 75%
+
+	.current-bar
+		background: #2e9dde
+		width: 0%
+
+	.done-bar
+		background: #74d8b6
+		position: absolute
+		top: 0
+		width: 0%
+	
+	.current-bar,
+	.done-bar
+		// +transition(.3s)
+
 
 .wizard
 	> .steps
@@ -76,16 +112,16 @@
 		.current a,
 		.current a:hover,
 		.current a:active
-		    background: #2184be
-		    border: 4px solid #006699
+		    background: #3687b6
+		    border: 4px solid #2e9dde
 		    color: #fff
 		    cursor: default
 
 		.done a,
 		.done a:hover,
 		.done a:active
-		    background: #006633
-		    border: 4px solid #3cb878
+		    background: #54b595
+		    border: 4px solid #74d8b6
 		    color: #fff
 
 		.error a,
@@ -107,10 +143,10 @@
 
 .wizard
 	> .content
-		background: #eee
+		// background: #e8e8e8
 		display: block
 		margin: 0.5em
-		max-height: 15em
+		height: 13em
 		overflow: auto
 		position: relative
 		width: auto
@@ -122,6 +158,7 @@
 		    height: 100%
 		    padding: 2.5%
 		    position: relative
+		    color: $arsenic
 
 
 	> .content
@@ -154,15 +191,98 @@
 					+breakpoint($celular)
 						width: 100%
 						margin: 0 2px
+
 				label
 					width: 100%
 					text-align: center
-					img
+
 					span
 						display: table
 						width: 100%
 						margin-top: 4px
+						color: #b0b0b0
 						+font-size(12pt)
+
+					img					
+						+opacity(.5)
+						background: #b0b0b0
+						+transition(.3s)
+						cursor: pointer
+
+					input[type="radio"]:checked + img
+						+opacity(1)
+						background: #2e9dde
+
+					input[type="radio"]:checked + img + span
+						color: #333
+
+
+			p
+				padding: 5px 0 10px 0
+
+		> .modoConfirmacao
+			+clearfix
+			> ul
+				> li
+					padding-bottom: 1em
+					+make-sm-column(3)
+					&:nth-child(2)
+						+make-sm-column(7)
+					&:nth-child(3)
+						+make-sm-column(2)
+
+				.formConfirm
+					+font-size(18pt)
+					+flexbox
+					+flex-direction(column)
+
+					li
+						margin-bottom: 2px
+
+						&:nth-child(3),
+						&:nth-child(4),
+						&:nth-child(5),
+						&:nth-child(6)
+							input
+								padding: 0 2px
+								width: 75%
+								float: right
+								border: thin solid #e1e1e1
+
+					#price
+						width: 30%
+						text-align: right
+
+				.imgConfirm
+					text-align: center
+					img
+						width: 100%
+						background: #2e9dde
+					span
+						+font-size(12pt)
+
+				.cadeado
+					+flexbox
+					+justify-content(center)
+					+align-items(center)
+					> li
+						margin-top: 2em
+						i
+							+font-size(150px)
+			> p
+				float: left
+				padding-bottom: 1em
+
+		.modoEnvio
+			+clearfix
+			+flexbox
+			+flex-direction(column)
+			+align-items(center)
+
+			i
+				padding: .5em 0 .5em
+				+font-size(60px)
+
 			p
 				text-align: center
 
@@ -178,12 +298,6 @@
 			    border: 0 none
 			    width: 100%
 			    height: 100%
-
-	> .content
-		> .body
-			input
-			    display: block
-			    border: 1px solid #ccc
 
 	> .content
 		> .body
@@ -218,9 +332,8 @@
 
 	> .actions
 		> ul
-		    display: flex
-		    justify-content: flex-end
-		    text-align: right
+			+flexbox
+			+justify-content(flex-end)
 
 	> .actions
 		> ul
@@ -236,9 +349,7 @@
 		    display: block
 		    padding: 0.5em 1em
 		    text-decoration: none
-		    -webkit-border-radius: 5px
-		    -moz-border-radius: 5px
-		    border-radius: 5px
+		    +border-radius(5px)
 
 	> .actions 
 		.disabled 

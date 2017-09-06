@@ -5,7 +5,6 @@
 	<title>DC Studios - Criação de logo e vídeos</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/home.css" />
-	<link rel="stylesheet" href="css/jquery.steps.css">
 	<link rel="stylesheet" href="css/geral.css" />
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/plugins.css" />
@@ -19,75 +18,90 @@
 				<div class="modal-header">
 					<h5 class="modal-title">Painel de opções de pagamento</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
+						<span aria-hidden="true">Fechar</span>
 					</button>
 				</div>
 				<div class="modal-body">
-					<div class="etapa-pagamento">
-						<!-- pgt -->
-						<form action="#" id="etapa-pagamento">
-							<div>
-								<span class="icon-titulo"><i class="fa fa-pencil-square-o"></i></span>
-								<section>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, qui ut! Deserunt laboriosam ipsam ullam, repellat quae dolore accusantium, doloribus, provident voluptas eaque minus et quo rem aliquam ipsa officia!Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br ><br>Quos, qui ut! Deserunt laboriosam ipsam ullam, repellat quae dolore accusantium, doloribus, provident voluptas eaque minus et quo rem aliquam ipsa officia!</p>
-									<div class="regrasPagto">
-										<label for="confirmRules">
-											<input id="confirmRules" name="confirmRules" type="checkbox" class="required">
-											<span>Eu li, e concordo!</span>
+					<!-- pgt -->
+					<form action="#" id="etapa-pagamento">
+						<div id="bar">
+							<div class="progress-bar"><div class="current-bar"></div><div class="done-bar"></div></div>
+						</div>
+						<div class="content">
+							<span class="icon-titulo"><i class="fa fa-pencil-square-o"></i></span>
+							<section>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, qui ut! Deserunt laboriosam ipsam ullam, repellat quae dolore accusantium, doloribus, provident voluptas eaque minus et quo rem aliquam ipsa officia!Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br ><br>Quos, qui ut! Deserunt laboriosam ipsam ullam, repellat quae dolore accusantium, doloribus, provident voluptas eaque minus et quo rem aliquam ipsa officia!</p>
+								<div class="regrasPagto">
+									<label for="confirmRules">
+										<input id="confirmRules" name="confirmRules" type="checkbox" class="required">
+										<span>Eu li, e concordo!</span>
+									</label>
+								</div>
+							</section>
+							<span><i class="fa fa-credit-card"></i></span>
+							<section class="modoPagamento">
+								<ul>
+									<li>
+										<label for="modoPagseguro">
+											<input id="modoPagseguro" type="radio" name="modoPagto" value="pagseguro" class="required modoPagto" checked>
+											<img src="images/modal/pagseguro.png" alt="Icone de pagamento para pagseguro">
+											<span>desconto -5,7% (boleto)</span>
 										</label>
-										<input id="price" name="price" type="hidden" value="">
-									</div>
-								</section>
-								<span><i class="fa fa-credit-card"></i></span>
-								<section class="modoPagamento">
-									<ul>
-										<li>
-											<label for="modoPagseguro">
-												<img src="images/modal/pagseguro.png" alt="Icone de pagamento para pagseguro">
-												<input id="modoPagseguro" type="radio" name="modoPagto" value="pagseguro" class="required modoPagto">
-												<span>desconto -5,7% (boleto)</span>
-											</label>
-										</li>
-										<li>
-											<label for="modoBB">
-												<img src="images/modal/Banco-do-Brasil.png" alt="Icone de pagamento para Banco do Brasil">
-												<input id="modoBB" type="radio" name="modoPagto" value="bancodobrasil" class="required modoPagto">
-												<span>desconto -10%</span>
-											</label>
-										</li>
-										<li>
-											<label for="modoWorkana">
-												<img src="images/modal/Workana.png" alt="Icone de pagamento para workana">
-												<input id="modoWorkana" type="radio" name="modoPagto" value="workana" class="required modoPagto">
-												<span>Aumento de +/- 15%</span>
-											</label>
-										</li>
-									</ul>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam cupiditate, suscipit quisquam. Amet ipsa, iure ad eligendi veritatis maiores, obcaecati!</p>
-								</section>
-								<span><i class="fa fa-check"></i></span>
-								<section>
-									<ul>
-										<li>Foo</li>
-										<li>Bar</li>
-										<li>Foobar</li>
-									</ul>
-								</section>
-								<span><i class="fa fa-thumbs-o-up"></i></span>
-								<section>
-									<ul>
-										<li>Foo</li>
-										<li>Bar</li>
-										<li>Foobar</li>
-									</ul>
-								</section>
-							</div>
-						</form>
-					</div>
+									</li>
+									<li>
+										<label for="modoBB">
+											<input id="modoBB" type="radio" name="modoPagto" value="bancodobrasil" class="required modoPagto">
+											<img src="images/modal/bancodobrasil.png" alt="Icone de pagamento para Banco do Brasil">
+											<span>desconto -10%</span>
+										</label>
+									</li>
+									<li>
+										<label for="modoWorkana">
+											<input id="modoWorkana" type="radio" name="modoPagto" value="workana" class="required modoPagto">
+											<img src="images/modal/Workana.png" alt="Icone de pagamento para workana">
+											<span>Aumento de +/- 15%</span>
+										</label>
+									</li>
+								</ul>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam cupiditate, suscipit quisquam. Amet ipsa, iure ad eligendi veritatis maiores, obcaecati!</p>
+							</section>
+							<span><i class="fa fa-check"></i></span>
+							<section class="modoConfirmacao">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis amet aliquam reprehenderit cumque error atque, repellendus id nulla, pariatur vero obcaecati cum accusamus distinctio reiciendis aspernatur deserunt eius. Fugiat, ipsum.</p>
+								<ul>
+									<li class="imgConfirm">
+										<ul>
+											<li><img src="images/modal/pagseguro.png" alt="Pagamento confirmado para pagseguro" class="confirmModo"></li>
+											<li><span class="confirmModo">desconto -5,7% (boleto)</span></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="formConfirm">
+											<li><strong>Forma de pagamento:</strong> <span data-modo="tt">Pagseguro</span></li>
+											<li><strong>Bônus:</strong> <span data-modo="descvalor">5,7% com pagamento pelo boleto</span></li>
+											<li><strong>Valor do serviço:</strong> <input id="price" type="text" name="price" disabled></li>
+											<li class="confirmModo"><strong>Nome:</strong> <input type="text"></li>
+											<li class="confirmModo"><strong>Email:</strong> <input type="text"></li>
+											<li class="confirmModo"><strong>Tel:</strong><input type="text"></li>
+										</ul>
+									</li>
+									<li>
+										<ul class="cadeado">
+											<li><i class="fa fa-lock"></i></li>
+										</ul>
+									</li>
+								</ul>
+							</section>
+							<span><i class="fa fa-thumbs-o-up"></i></span>
+							<section class="modoEnvio">
+								<i class="fa fa-send"></i>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio fugit molestiae cumque asperiores tempora quibusdam at labore nobis, perspiciatis sunt repellat iusto illum est magnam numquam qui, facere quasi, odit, id consequatur dolores adipisci cupiditate.</p>
+								<p id="textajax"></p>
+							</section>
+						</div>
+					</form>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="botao acafrao medio" data-dismiss="modal">Cancelar</button>
-					<button type="button" class="botao verde-mar medio confirmaPagto">Concordo</button>
 				</div>
 			</div>
 		</div>
@@ -712,127 +726,6 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/jquery.steps.js"></script>
-	<script>
-		$(function(){		
-			// inicio funções menu responsivo		
-			$('.toggle').click(function(){
-				$('.menu-responsivo').toggleClass('ativo');
-				$toglefont = $(".toggle i").hasClass("fa-bars");
-				if($toglefont == true) {
-					$('.toggle i').removeClass('fa-bars');
-					$('.toggle i').addClass('fa-times');
-				} else {
-					$('.toggle i').removeClass('fa-times');
-					$('.toggle i').addClass('fa-bars');
-				}
-			});
-			$('.toggle-fechar').click(function(){
-				$('.menu-responsivo').toggleClass('ativo');
-				$toglefont = $(".toggle i").hasClass("fa-bars");
-				if($toglefont == true) {
-					$('.toggle i').removeClass('fa-bars');
-					$('.toggle i').addClass('fa-times');
-				} else {
-					$('.toggle i').removeClass('fa-times');
-					$('.toggle i').addClass('fa-bars');
-				}
-			});
-			// fim funções menu responsivo
-			
-			// inicia evento wow
-			new WOW().init();
-		});
-
-		var host = "dcstudios.com.br"
-		if (window.location.host == host && window.location.protocol != "https:") {
-			window.location.protocol = "https:"
-		}
-
-		// enveto esconder e mostrar botão scrolltop
-		$(window).scroll(function(){
-			if($(document).scrollTop() > 200){
-				$('.scrollTop').fadeIn('slow');
-			} else { 
-				$('.scrollTop').fadeOut('slow');
-			} 
-		});
-
-		// evento ir para o top
-		var body = $("html, body");
-		$('.scrollSuave').click(function() {
-			body.animate({
-				scrollTop: $( $.attr(this, 'href') ).offset().top
-			}, 800);
-			return false;
-		});
-
-		// etapas de pagamento
-		var form = $("#etapa-pagamento").show();
-		form.validate({
-			errorPlacement: function errorPlacement(error, element) { 
-				element.before(error); },
-				rules: {
-					modoPagto: {
-						required: ".modoPagto"
-					}
-				},
-				messages:{
-					confirmRules: {
-						required: "Campo requerido para prosseguir!"
-					},
-					price: {
-						required: "Algum erro ocorreu com este botão, por favor, contacte nossos administradores!"
-					},
-					modoPagto: {
-						required: "Escolha uma forma de pagamento antes de prosseguir!"
-					}
-				}
-			});
-		form.children("div").steps({
-			labels: {
-				cancel: "Cancelar",
-				current: "current step:",
-				pagination: "Pagination",
-				finish: "Concluir",
-				next: "Continuar",
-				previous: "Voltar",
-				loading: "Carregando ..."
-			},
-			titleTemplate: "#title#",
-			headerTag: "span",
-			bodyTag: "section",
-			saveState: false,
-			transitionEffect: "fade",
-			onStepChanging: function (event, currentIndex, newIndex)
-			{
-				if(currentIndex === 0){
-					form.validate().settings.ignore = ":disabled,:hidden";
-					return form.valid();
-				}else{
-					form.validate().settings.ignore = ":disabled";
-					return form.valid();
-				}
-			},
-			onFinishing: function (event, currentIndex)
-			{
-				form.validate().settings.ignore = ":disabled";
-				return form.valid();
-			},
-			onFinished: function (event, currentIndex)
-			{
-				alert("Submitted!");
-			}
-		});
-		// pegando valores de botões
-		$(function(){
-			$('.btnPagto').click(function() {
-				novoValor = $(this).val();
-				$("#price").val(novoValor);
-				$(".wizard").steps('getStep');
-				// $('#etapa-pagamento')[0].reset();
-				// $ (".wizard").steps('reset');
-			})
-		})
-	</script>
+	<script src="js/funcoes.js"></script>
 </body>
 </html>
