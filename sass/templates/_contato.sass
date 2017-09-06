@@ -21,8 +21,11 @@ section#contato
 			width: 100%
 			padding: 9px
 			background: rgba(255,255,255,.4)
-			color: $branco
+			color: rgba(255,255,255,.6)
 			border-color: transparent
+			font-style: italic
+		textarea
+			height: 10em
 		.icon-select
 			background: 
 				image: url(../images/contato/icon-select.png)
@@ -40,11 +43,17 @@ section#contato
 		input[value="Pedir Desconto"]
 			text-align: center
 			font-weight: $regular
+			font-style: normal
+
 		::-webkit-input-placeholder
-		   color: $branco
+			color: rgba(255,255,255,.6)
 		:-moz-placeholder
-		   color: $branco
+			color: rgba(255,255,255,.6)
 		::-moz-placeholder
-		   color: $branco
-		:-ms-input-placeholder  
-		   color: $branco
+			color: rgba(255,255,255,.6)
+		:-ms-input-placeholder 
+			color: rgba(255,255,255,.6)
+	
+	.bg-success,
+	.bg-danger
+		padding: 10px

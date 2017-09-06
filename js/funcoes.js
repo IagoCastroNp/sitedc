@@ -59,11 +59,6 @@ var done_bar = $(".done-bar");
 form.validate({
 	errorPlacement: function errorPlacement(error, element) { 
 		element.before(error); },
-		rules: {
-			modoPagto: {
-				required: ".modoPagto"
-			}
-		},
 		messages:{
 			confirmRules: {
 				required: "Campo requerido para prosseguir!"
@@ -134,27 +129,22 @@ form.children(".content").steps({
 			});
 		}
 		
-		if(currentIndex === 0){
-			form.validate().settings.ignore = ":disabled,:hidden";
-			return form.valid();
-		}else{
-			form.validate().settings.ignore = ":disabled";
-			return form.valid();
-		}
+		form.validate().settings.ignore = ":disabled,:hidden";
+		return form.valid();
 	},
 	onFinishing: function (event, currentIndex)
 	{
 		done_bar.animate({
 			width: "100%"
 		}, 500, function() {
-    		current_bar.animate({width: "100%"}, 500);
-    	});
-		form.validate().settings.ignore = ":disabled";
+			current_bar.animate({width: "100%"}, 500);
+		});
+		form.validate().settings.ignore = ":disabled,:hidden";
 		return form.valid();
 	},
 	onFinished: function (event, currentIndex)
 	{
-
+		
 	}
 });
 // pegando valores de botões
