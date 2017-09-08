@@ -66,11 +66,12 @@
 		</div>
 	</footer>
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/jquery.steps.js"></script>
-	<script src="js/funcoes.js"></script>
+	<script src="<?= bloginfo('template_url'); ?>/js/jquery.min.js"></script>
+	<script src="<?= bloginfo('template_url'); ?>/js/jquery.validate.min.js"></script>
+	<script src="<?= bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
+	<script src="<?= bloginfo('template_url'); ?>/js/wow.min.js"></script>
+	<script src="<?= bloginfo('template_url'); ?>/js/jquery.steps.js"></script>
+	<?php include('js/funcoes.js.php'); ?>
+	
 </body>
 </html>

@@ -6,7 +6,7 @@
 
 				<!-- video identidade visual -->
 				<div class="video-identidade wow rubberBand" data-wow-duration=".8s" data-wow-delay=".5s">
-					<img src="images/video-identidade.png" alt="Vídeo Serviços Identidade Visual">
+					<img src="<?= bloginfo('template_url'); ?>/images/video-identidade.png" alt="Vídeo Serviços Identidade Visual">
 				</div>
 				<!-- texto descrição idetidade visual -->
 				<p class="descricao-identidade wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
@@ -172,7 +172,7 @@
 
 				<!-- video produção de vídeos -->
 				<div class="video-producaov wow rubberBand" data-wow-duration=".8s" data-wow-delay=".5s">
-					<img src="images/video-producao.png" alt="Vídeo Serviços Produção de Vídeos">
+					<img src="<?= bloginfo('template_url'); ?>/images/video-producao.png" alt="Vídeo Serviços Produção de Vídeos">
 				</div>
 				<!-- descrição produção de vídeos -->
 				<p class="descricao-producaov wow fadeIn" data-wow-duration="1s" data-wow-delay=".1s">
@@ -247,7 +247,7 @@
 				<!-- ilustração criando mascote -->
 				<div class="criar-mascote">
 					<figure class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">
-						<img src="images/ilustracao/chars-draw.png" alt="Criar Mascote">
+						<img src="<?= bloginfo('template_url'); ?>/images/ilustracao/chars-draw.png" alt="Criar Mascote">
 					</figure>
 					<ul class=" wow pulse" data-wow-duration=".8s" data-wow-delay=".5s">
 						<li>Criamos primeiro o rascunho</li>
@@ -267,7 +267,7 @@
 				<!-- ilustração editando o mascote -->
 				<div class="editar-mascote">
 					<figure class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">
-						<img src="images/ilustracao/chars-cor-vetor.png" alt="Cores e Vetores">
+						<img src="<?= bloginfo('template_url'); ?>/images/ilustracao/chars-cor-vetor.png" alt="Cores e Vetores">
 					</figure>
 					<!-- valores de edições do mascote -->
 					<ul>
@@ -304,7 +304,7 @@
 				<!-- ilustração editando as posições e face do mascote -->
 				<div class="editar-posicoes">
 					<figure class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay="1.2s">
-						<img src="images/ilustracao/chars-position.png" alt="Criar ou Editar Posições">
+						<img src="<?= bloginfo('template_url'); ?>/images/ilustracao/chars-position.png" alt="Criar ou Editar Posições">
 					</figure>
 					<ul class="descricao-criar-mascote wow pulse" data-wow-duration=".8s" data-wow-delay=".5s">
 						<li>Crie novas posições para seu mascote!</li>
@@ -327,7 +327,7 @@
 				<ul>
 					<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".2s">
 						<figure class="imghvr-blur">
-							<img src="images/destaque/art.png" alt="TITULO PROJETO">
+							<img src="<?= bloginfo('template_url'); ?>/images/destaque/art.png" alt="TITULO PROJETO">
 							<figcaption>
 								<a href="#">
 									<h3>Nome do projeto!</h3>
@@ -339,7 +339,7 @@
 					</li>
 					<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">
 						<figure class="imghvr-blur">
-							<img src="images/destaque/logo.png" alt="TITULO PROJETO">
+							<img src="<?= bloginfo('template_url'); ?>/images/destaque/logo.png" alt="TITULO PROJETO">
 							<figcaption>
 								<a href="#">
 									<h3>Nome do projeto!</h3>
@@ -351,7 +351,7 @@
 					</li>
 					<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".8s">
 						<figure class="imghvr-blur">
-							<img src="images/destaque/logo-2.png" alt="TITULO PROJETO">
+							<img src="<?= bloginfo('template_url'); ?>/images/destaque/logo-2.png" alt="TITULO PROJETO">
 							<figcaption>
 								<a href="#">
 									<h3>Nome do projeto!</h3>
@@ -363,7 +363,7 @@
 					</li>
 					<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay="1.1s">
 						<figure class="imghvr-blur">
-							<img src="images/destaque/vinheta.png" alt="TITULO PROJETO">
+							<img src="<?= bloginfo('template_url'); ?>/images/destaque/vinheta.png" alt="TITULO PROJETO">
 							<figcaption>
 								<a href="#">
 									<h3>Nome do projeto!</h3>
@@ -393,7 +393,7 @@
 					<li>
 						<ul>
 							<li class=" wow pulse" data-wow-duration=".8s" data-wow-delay=".2s">
-								<img class="img-circle" src="images/workana/foto.png" alt="Foto Iago">
+								<img class="img-circle" src="<?= bloginfo('template_url'); ?>/images/workana/foto.png" alt="Foto Iago">
 							</li>
 							<li class=" wow fadeIn" data-wow-duration="1s" data-wow-delay=".5s">
 								<p>
@@ -411,7 +411,7 @@
 					<li>
 						<ul>
 							<li class=" wow pulse" data-wow-duration=".8s" data-wow-delay=".5s">
-								<img class="img-circle" src="images/workana/foto.png" alt="Foto Iago">
+								<img class="img-circle" src="<?= bloginfo('template_url'); ?>/images/workana/foto.png" alt="Foto Iago">
 							</li>
 							<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".8s">
 								<p>
@@ -429,7 +429,7 @@
 					<li>
 						<ul>
 							<li class=" wow pulse" data-wow-duration=".8s" data-wow-delay=".8s">
-								<img class="img-circle" src="images/workana/foto.png" alt="Foto Iago">
+								<img class="img-circle" src="<?= bloginfo('template_url'); ?>/images/workana/foto.png" alt="Foto Iago">
 							</li>
 							<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay="1.1s">
 								<p>

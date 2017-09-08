@@ -1,3 +1,4 @@
+<script>
 $(function(){		
 	// inicio funções menu responsivo		
 	$('.toggle').click(function(){
@@ -99,19 +100,19 @@ form.children(".content").steps({
 			var modo = $( "input[type=radio][name=modoPagto]:checked" ).val();
 			if(modo === 'workana'){
 				$("li.confirmModo").css({"display":"none"});
-				$("img.confirmModo").attr({src: "images/modal/"+ modo +".png", alt: "Pagamento confirmado para Workana"});
+				$("img.confirmModo").attr({src: "<?= bloginfo('template_url'); ?>/images/modal/"+ modo +".png", alt: "Pagamento confirmado para Workana"});
 				$("span.confirmModo").text("Aumento de +/- 15%");
 				$("span[data-modo='tt']").text("Workana");
 				$("span[data-modo='descvalor']").text("Aumento no valor do serviço de +/- 15%.");
 			}else if(modo === 'bancodobrasil'){
 				$("li.confirmModo").css({"display":"block"});
-				$("img.confirmModo").attr({src: "images/modal/"+ modo +".png", alt: "Pagamento confirmado para Banco do Brasil"});
+				$("img.confirmModo").attr({src: "<?= bloginfo('template_url'); ?>/images/modal/"+ modo +".png", alt: "Pagamento confirmado para Banco do Brasil"});
 				$("span.confirmModo").text("desconto -10%");
 				$("span[data-modo='tt']").text("Banco do Brasil");
 				$("span[data-modo='descvalor']").text("10% com pagamento por depósito bancário.");
 			}else{
 				$("li.confirmModo").css({"display":"none"});
-				$("img.confirmModo").attr({src: "images/modal/"+ modo +".png", alt: "Pagamento confirmado para PagSeguro"});
+				$("img.confirmModo").attr({src: "<?= bloginfo('template_url'); ?>/images/modal/"+ modo +".png", alt: "Pagamento confirmado para PagSeguro"});
 				$("span.confirmModo").text("desconto -5,7% (boleto)");
 				$("span[data-modo='tt']").text("Pagseguro");
 				$("span[data-modo='descvalor']").text("5,7% com pagamento pelo boleto.");
@@ -159,3 +160,4 @@ $(function(){
 		$("#price").val(novoValor);
 	})
 })
+</script>

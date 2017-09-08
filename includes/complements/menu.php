@@ -2,7 +2,7 @@
 if($estilo != 'home'): ?>
 <nav class="wow slideInDown" data-wow-duration=".5s" data-wow-delay=".2s">
 	<ul>
-		<li><a href="index.php" class="scrollSuave ativo">Home</a></li>
+		<li><a href="<?= bloginfo('url'); ?>" class="scrollSuave ativo">Home</a></li>
 		<li><a href="portfolio.php">Portfolio</a></li>
 	</ul>
 </nav>

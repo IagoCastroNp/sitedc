@@ -2,12 +2,12 @@
 <html lang="pt">
 <head>
 	<meta charset="UTF-8">
-	<title>DC Studios - Criação de logo e vídeos</title>
+	<title><?= bloginfo('name'); ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/<?= $estilo; ?>.css" />
-	<link rel="stylesheet" href="css/geral.css" />
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/plugins.css" />
+	<link rel="stylesheet" href="<?= bloginfo('template_url'); ?>/css/<?= $estilo; ?>.css" />
+	<link rel="stylesheet" href="<?= bloginfo('template_url'); ?>/css/geral.css" />
+	<link rel="stylesheet" href="<?= bloginfo('template_url'); ?>/css/animate.css">
+	<link rel="stylesheet" href="<?= bloginfo('template_url'); ?>/css/plugins.css" />
 </head>
 <body id="start">
 	<!-- container modal -->
@@ -44,21 +44,21 @@
 									<li>
 										<label for="modoPagseguro">
 											<input id="modoPagseguro" type="radio" name="modoPagto" value="pagseguro" class="required modoPagto" checked>
-											<img src="images/modal/pagseguro.png" alt="Icone de pagamento para pagseguro">
+											<img src="<?= bloginfo('template_url'); ?>/images/modal/pagseguro.png" alt="Icone de pagamento para pagseguro">
 											<span>desconto -5,7% (boleto)</span>
 										</label>
 									</li>
 									<li>
 										<label for="modoBB">
 											<input id="modoBB" type="radio" name="modoPagto" value="bancodobrasil" class="required modoPagto">
-											<img src="images/modal/bancodobrasil.png" alt="Icone de pagamento para Banco do Brasil">
+											<img src="<?= bloginfo('template_url'); ?>/images/modal/bancodobrasil.png" alt="Icone de pagamento para Banco do Brasil">
 											<span>desconto -10%</span>
 										</label>
 									</li>
 									<li>
 										<label for="modoWorkana">
 											<input id="modoWorkana" type="radio" name="modoPagto" value="workana" class="required modoPagto">
-											<img src="images/modal/Workana.png" alt="Icone de pagamento para workana">
+											<img src="<?= bloginfo('template_url'); ?>/images/modal/Workana.png" alt="Icone de pagamento para workana">
 											<span>Aumento de +/- 15%</span>
 										</label>
 									</li>
@@ -71,7 +71,7 @@
 								<ul>
 									<li class="imgConfirm">
 										<ul>
-											<li><img src="images/modal/pagseguro.png" alt="Pagamento confirmado para pagseguro" class="confirmModo"></li>
+											<li><img src="<?= bloginfo('template_url'); ?>/images/modal/pagseguro.png" alt="Pagamento confirmado para pagseguro" class="confirmModo"></li>
 											<li><span class="confirmModo">desconto -5,7% (boleto)</span></li>
 										</ul>
 									</li>
@@ -119,8 +119,8 @@
 
 			<!-- logo do topo dc studios -->
 			<div class="logo wow slideInLeft" data-wow-duration=".7s" data-wow-delay=".1s">
-				<a href="index.php">
-					<img src="images/logo-topo.png" alt="Logo Topo DC Studios" />
+				<a href="<?= bloginfo('url'); ?>">
+					<img src="<?= bloginfo('template_url'); ?>/images/logo-topo.png" alt="Logo Topo DC Studios" />
 				</a>
 			</div>
 
@@ -141,7 +141,9 @@
 			</div>
 
 			<div class="slider wow pulse" data-wow-duration=".4s" data-wow-delay=".3s">
-				<?= $chamada; ?>
+				<?php if($estilo == 'home'): ?>
+					<img src="<?= bloginfo('template_url');?>/images/slider.png" alt="Slider" />
+				<?php else: $chamada; endif; ?>
 			</div>
 
 
