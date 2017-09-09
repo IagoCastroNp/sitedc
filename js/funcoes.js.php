@@ -34,22 +34,22 @@ if (window.location.host == host && window.location.protocol != "https:") {
 	window.location.protocol = "https:"
 }
 
-// enveto esconder e mostrar botão scrolltop
-$(window).scroll(function(){
-	if($(document).scrollTop() > 200){
-		$('.scrollTop').fadeIn('slow');
-	} else { 
-		$('.scrollTop').fadeOut('slow');
-	} 
-});
-
 // evento ir para o top
 var body = $("html, body");
-$('.scrollSuave').click(function() {
+$('.scrollSuave a').click(function() {
 	body.animate({
 		scrollTop: $( $.attr(this, 'href') ).offset().top
 	}, 800);
 	return false;
+});
+
+// enveto esconder e mostrar botão scrolltop
+$(window).scroll(function(){
+	if($(document).scrollTop() > 200){
+		$('.scrollTop a').fadeIn('slow');
+	} else { 
+		$('.scrollTop a').fadeOut('slow');
+	} 
 });
 
 
