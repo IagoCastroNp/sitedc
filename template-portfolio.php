@@ -4,7 +4,7 @@
 	 */
 
 	$estilo = 'portfolio';
-	$chamada = '<h1>Confira projetos & exemplos criado</h1>';
+	$chamada = 'Confira projetos & exemplos criados!';
 	include("header.php");
 	include("includes/pages/portfolio.php");
 	include("footer.php");

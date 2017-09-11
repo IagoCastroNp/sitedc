@@ -18,9 +18,17 @@ section#producaov
 		max-width: 600px;
 
 	.tabela-producaov-preco
+
+		p.bg-danger
+			max-width: 400px
+			margin: 0 auto
+			padding: 10px
+			text-align: center
+
 		> ul
 			+clearfix
 			+make-row
+
 			> li
 				+make-xs-column(12)
 				+make-sm-column(6)
@@ -49,7 +57,16 @@ section#producaov
 						padding: 0 5px
 						font-weight: $regular
 						color: #666666
+
 						strong
 							+font-size(30pt)
 							font-weight: $bold
 							color: #333333
+
+						button
+							background-color: #ed145b
+							color: $branco
+
+						&:last-child
+							button
+								background-color: #111111

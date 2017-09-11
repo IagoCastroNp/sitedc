@@ -63,7 +63,9 @@
 			<div class="slider wow pulse" data-wow-duration=".4s" data-wow-delay=".3s">
 				<?php if($estilo == 'home'): ?>
 					<img src="<?= bloginfo('template_url');?>/images/slider.png" alt="Slider" />
-				<?php else: echo $chamada; endif; ?>
+				<?php else: ?>
+					<h1><?= $chamada ?></h1>
+				<?php endif; ?>
 			</div>
 
 

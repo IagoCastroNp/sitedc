@@ -26,6 +26,12 @@ section#identidade
 		> ul
 			+clearfix
 			+make-row
+
+			p.bg-danger
+				max-width: 400px
+				margin: 0 auto
+				padding: 10px
+				text-align: center
 			> li
 				+make-xs-column(12)
 				+make-sm-column(6)
@@ -39,18 +45,34 @@ section#identidade
 						color: #ede5e3
 					padding: 20px 15px 10px
 					margin: 0 0 30px 0
-					&.plano-basico
+					&.plano-row1
 						background:
 							image: url('../images/identidade/bg-basico.png')
-					&.plano-profissional
+						li
+							button
+								background-color: #66d7d1
+								color: $branco
+					&.plano-row2
 						background:
 							image: url('../images/identidade/bg-profissional.png')
-					&.plano-business
+						li
+							button
+								background-color: #cccc66
+								color: $branco
+					&.plano-row3
 						background:
 							image: url('../images/identidade/bg-business.png')
-					&.plano-personalizado
+						li
+							button
+								background-color: #ff9933
+								color: $branco
+					&.plano-row4
 						background:
-							image: url('../images/identidade/bg-personalizado.png')					
+							image: url('../images/identidade/bg-personalizado.png')	
+						li
+							button
+								background-color: #333333
+								color: $branco
 					li:first-child
 						position: relative
 						top: -10px
@@ -66,6 +88,10 @@ section#identidade
 							+font-size(30pt)
 							font-weight: $bold
 							color: #333333
+
+					li.dif
+						margin: 0
+
 	table
 		+clearfix
 		// +make-row
