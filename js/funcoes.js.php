@@ -1,5 +1,5 @@
 <script>
-$(function(){		
+	$(function(){		
 	// inicio funções menu responsivo		
 	$('.toggle').click(function(){
 		$('.menu-responsivo').toggleClass('ativo');
@@ -29,10 +29,10 @@ $(function(){
 	new WOW().init();
 });
 
-var host = "dcstudios.com.br"
-if (window.location.host == host && window.location.protocol != "https:") {
-	window.location.protocol = "https:"
-}
+	var host = "dcstudios.com.br"
+	if (window.location.host == host && window.location.protocol != "https:") {
+		window.location.protocol = "https:"
+	}
 
 // evento ir para o top
 var body = $("html, body");
@@ -160,4 +160,28 @@ $(function(){
 		$("#price").val(novoValor);
 	})
 })
+
+//lightbox
+lightbox.option({
+	'maxWidth': 1000,
+	'resizeDuration': 600
+})
+</script>
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '389726954779436',
+			xfbml      : true,
+			version    : 'v2.10'
+		});
+		FB.AppEvents.logPageView();
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/pt_BR/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
 </script>

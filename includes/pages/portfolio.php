@@ -26,102 +26,38 @@
 			</div>
 		</div>
 		<ul class="lista">
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".2s">
-				<figure class="imghvr-blur">
-					<img src="images/destaque/art.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">
-				<figure class="imghvr-blur">
-					<img src="images/destaque/logo.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".8s">
-				<figure class="imghvr-blur">
-					<img src="images/destaque/logo-2.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay="1.1s">
-				<figure class="imghvr-blur">
-					<img src="images/destaque/vinheta.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".2s">
-				<figure class="imghvr-blur">
-					<img src="images/destaque/art.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">
-				<figure class="imghvr-blur">
-					<img src="images/destaque/logo.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".8s">
-				<figure class="imghvr-blur">
-					<img src="images/destaque/logo-2.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay="1.1s">
-				<figure class="imghvr-blur">
-					<img src="images/destaque/vinheta.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
+			<?php
+			$args_portfolio = array (
+				'post_type' => 'projeto',
+				'posts_per_page' => '8',
+				'category_name' => 'portfolio',
+				// 'meta_key' => 'proj-iv',
+				// 'orderby'	=> 'meta_value_num',
+				'order'		=> 'ASC'
+				);
+			// Custom query.
+			$projetos = new WP_Query($args_portfolio);
+			// Check that we have query results.
+			if($projetos->have_posts()){ 
+				while($projetos->have_posts()): $projetos->the_post();
+				?>
+				<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".2s">
+					<figure class="imghvr-blur">
+						<img src="<?php the_post_thumbnail_url('portfolio-thumb'); ?>" alt="TITULO PROJETO">
+						<figcaption>
+							<a href="<?php the_permalink(); ?>">
+								<h3><?php the_title(); ?></h3>
+								<p><?php the_field('qualificacao_projeto'); ?></p>
+							</a>
+							<div class="sobrepor"></div>
+						</figcaption>
+					</figure>
+				</li>
+				<?php
+				endwhile;
+			}
+			wp_reset_postdata();
+			?>
 		</ul>
 	</div>
 </section>

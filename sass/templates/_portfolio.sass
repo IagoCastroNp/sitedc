@@ -1,15 +1,11 @@
 header
-	background:
-		// image: url('../images/bg-portfolio.png')
-		repeat: no-repeat
-		position: bottom center
-		size: cover
-		color: #565278
 	max-height: 390px
 	&:after
 		+gradient(90deg, #ff1e4a, #fe9842)
 section.portfolio
 	background: #f1f1f1
+	padding-bottom: 3em
+
 	.titulop
 		+breakpoint($celular)
 			+font-size(20pt)
@@ -132,10 +128,20 @@ section.projeto
 	.descricao-projeto
 		margin-top: 30px
 
-	ul
-		&:not(.descricao-projeto)
-			li
-				+make-sm-column(3)
-				figure
-					border: none
-	ul
+		ul
+			li.dif
+				border-top: thin dashed #BDBDBD
+				padding-top: 8px
+				margin-bottom: 8px
+
+				span
+					font-style: italic
+
+					i
+						color: #BDBDBD
+
+			&:not(.descricao-projeto)
+				li
+					+make-sm-column(3)
+					figure
+						border: none

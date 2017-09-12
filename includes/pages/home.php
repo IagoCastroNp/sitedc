@@ -33,7 +33,7 @@
 					$row += 1;
 					?>
 					<li>
-						<ul class="plano-row<?= $row;?> wow rubberBand" data-wow-duration="1s" data-wow-delay=".2s">
+						<ul class="plano-row<?= $row;?> wow rubberBand" data-wow-duration="1s" data-wow-delay=".<?= $row;?>s">
 							<li><strong><?php the_sub_field('titulo_plano'); ?></strong></li>
 							<?php 
 							if(have_rows('conteudo_plano')){ 
@@ -76,6 +76,7 @@
 			} else{
 				echo '<p class="bg-danger">Não existe planos em sua tabela!</p>';
 			}
+			wp_reset_postdata();
 			?>
 		</div>
 		<!-- tabela informação planos identidade visual -->
@@ -198,11 +199,12 @@
 				echo '<ul>';
 				while($planos->have_posts()): $planos->the_post();
 				if(have_rows('plano_4_pv')){
-					while(have_rows('plano_4_pv')) : the_row(); 
+					$row = 0;
+					while(have_rows('plano_4_pv')) : the_row();
 					$row += 1;
 					?>
 					<li>
-						<ul class="plano-row<?= $row;?> wow rubberBand" data-wow-duration="1s" data-wow-delay=".2s">
+						<ul class="plano-row<?= $row;?> wow rubberBand" data-wow-duration="1s" data-wow-delay=".<?= $row;?>s">
 							<li><strong><?php the_sub_field('titulo_plano'); ?></strong></li>
 							<?php 
 							if(have_rows('conteudo_plano')){ 
@@ -245,6 +247,7 @@
 			} else{
 				echo '<p class="bg-danger">Não existe planos em sua tabela!</p>';
 			}
+			wp_reset_postdata();
 			?>
 		</div>
 	</div>
@@ -331,58 +334,42 @@
 <!-- sessoa destaques -->
 <section id="destaques">
 	<div class="container">
-		<h1 class="titulop wow tada" data-wow-duration=".8s" data-wow-delay=".5s">Projetos em Destaques</h1>
+		<!-- <h1 class="titulop wow tada" data-wow-duration=".8s" data-wow-delay=".5s">Projetos em Destaques</h1> -->
 
 		<!-- itens em destaque no portfólio -->
-		<ul>
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".2s">
-				<figure class="imghvr-blur">
-					<img src="<?= bloginfo('template_url'); ?>/images/destaque/art.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".5s">
-				<figure class="imghvr-blur">
-					<img src="<?= bloginfo('template_url'); ?>/images/destaque/logo.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".8s">
-				<figure class="imghvr-blur">
-					<img src="<?= bloginfo('template_url'); ?>/images/destaque/logo-2.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
-			<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay="1.1s">
-				<figure class="imghvr-blur">
-					<img src="<?= bloginfo('template_url'); ?>/images/destaque/vinheta.png" alt="TITULO PROJETO">
-					<figcaption>
-						<a href="#">
-							<h3>Nome do projeto!</h3>
-							<p>Descrição do projeto!</p>
-						</a>
-						<div class="sobrepor"></div>
-					</figcaption>
-				</figure>
-			</li>
+		<ul>			
+			<?php
+			$args_portfolio = array (
+				'post_type' => 'projeto',
+				'posts_per_page' => '4',
+				'category_name' => 'portfolio',
+				'order'		=> 'ASC'
+				);
+			// Custom query.
+			$projetos = new WP_Query($args_portfolio);
+			// Check that we have query results.
+			if($projetos->have_posts()){ 
+				$row = 0;
+				while($projetos->have_posts()): $projetos->the_post();
+				$row += 2;
+				?>
+				<li class=" wow fadeIn" data-wow-duration=".8s" data-wow-delay=".<?= $row; ?>s">
+					<figure class="imghvr-blur">
+						<img src="<?php the_post_thumbnail_url('portfolio-thumb'); ?>" alt="TITULO PROJETO">
+						<figcaption>
+							<a href="<?php the_permalink(); ?>">
+								<h3><?php the_title(); ?></h3>
+								<p><?php the_field('qualificacao_projeto'); ?></p>
+							</a>
+							<div class="sobrepor"></div>
+						</figcaption>
+					</figure>
+				</li>
+				<?php
+				endwhile;
+			}
+			wp_reset_postdata();
+			?>
 		</ul>
 	</div>
 </section>
@@ -508,7 +495,7 @@
 		</form>
 	</div>
 	<!-- endereço no google maps -->
-	<div class="mapa-google-escritorio  wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
+	<!-- <div class="mapa-google-escritorio  wow fadeIn" data-wow-duration="1s" data-wow-delay="1.2s">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3333.401755163445!2d-36.349511415053556!3d-6.508380805811629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1504242043040" width="100%" height="200" frameborder="0" allowfullscreen></iframe>
-	</div>
+	</div> -->
 </section>

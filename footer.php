@@ -3,8 +3,7 @@
 		<!-- footer menu -->
 		<div class="container">
 			<ul class="link-footer">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="portfolio.html">Portfólio</a></li>
+				<?php wp_nav_menu(array('theme_location' => 'footer-menu')); ?>
 			</ul>
 		</div>
 		<hr>
@@ -69,6 +68,7 @@
 	<script src="<?= bloginfo('template_url'); ?>/js/jquery.min.js"></script>
 	<script src="<?= bloginfo('template_url'); ?>/js/jquery.validate.min.js"></script>
 	<script src="<?= bloginfo('template_url'); ?>/js/bootstrap.min.js"></script>
+	<script src="<?= bloginfo('template_url'); ?>/js/lightbox.min.js"></script>
 	<script src="<?= bloginfo('template_url'); ?>/js/wow.min.js"></script>
 	<script src="<?= bloginfo('template_url'); ?>/js/jquery.steps.js"></script>
 	<?php include('js/funcoes.js.php'); ?>
